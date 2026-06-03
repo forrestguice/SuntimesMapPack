@@ -1,0 +1,71 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.forrestguice.suntimes.mappack'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.forrestguice.suntimes.mappack"
+        minSdk 16
+        targetSdk 34
+
+        versionCode 1
+        versionName "0.1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        resConfigs "en"
+
+        def suntimesPermissionRoot = "suntimes.nightly"
+        def suntimesApplicationId = "com.forrestguice.suntimeswidget.nightly"
+        def mappackAuthorityRoot = "suntimes.mappack"
+
+        //buildConfigField "String", "GIT_HASH", "\"${getGitHash()}\""
+        manifestPlaceholders.suntimesApplicationId = "$suntimesApplicationId"
+        manifestPlaceholders.suntimesPermissionRoot = "$suntimesPermissionRoot"
+        manifestPlaceholders.mappackAuthorityRoot = "$mappackAuthorityRoot"
+        buildConfigField "String", "AUTHORITY_ROOT", "\"$mappackAuthorityRoot\""
+        buildConfigField "String", "SUNTIMES_APPLICATION_ID", "\"$suntimesApplicationId\""
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        abortOnError true
+        checkReleaseBuilds true
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
+
+/*def getGitHash()
+{
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-parse', '--short', 'HEAD'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}*/
