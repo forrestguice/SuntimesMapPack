@@ -131,7 +131,9 @@ public class SuntimesMapProvider extends ContentProvider
                         case COLUMN_BACKGROUND_FILE:
                             row[i] = item.getUri();
                             if (Build.VERSION.SDK_INT >= 19) {
-                                context.grantUriPermission(getCallingPackage(), Uri.parse(item.getUri()), Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                                if (!BuildConfig.SUNTIMES_APPLICATION_ID.equals(getCallingPackage())) {   // Suntimes already has required permissions by default
+                                    context.grantUriPermission(getCallingPackage(), Uri.parse(item.getUri()), Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                                }
                             }
                             break;
                     }

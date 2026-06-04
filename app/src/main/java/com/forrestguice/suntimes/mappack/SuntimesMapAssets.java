@@ -19,8 +19,10 @@
 package com.forrestguice.suntimes.mappack;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.net.Uri;
+import android.os.Build;
 import android.util.Log;
 
 import com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract;
@@ -40,7 +42,7 @@ import androidx.core.content.FileProvider;
 public class SuntimesMapAssets
 {
     /**
-     * initAssets; copies assets/maps/* into internalStorage/app/files
+     * initAssets; copies assets/maps/* into internalStorage/app/files and pre-grants uri permissions to Suntimes
      * @param context Context
      */
     public static void initAssets(@Nullable Context context)
@@ -58,7 +60,7 @@ public class SuntimesMapAssets
                 {
                     String srcPath = "maps/" + srcFile;
                     String dstPath = getFilesDir(context) + "/" + srcFile;
-                    File dstFile = new File(srcPath);
+                    File dstFile = new File(dstPath);
                     if (!dstFile.exists())
                     {
                         try {
@@ -77,6 +79,7 @@ public class SuntimesMapAssets
                             Log.e("MapProvider", "init: failed to initialize asset! " + srcPath + " (" + dstPath + ")", e);
                         }
                     } //else Log.d("MapProvider", "init: " + dstFile.getName() + " already exists.");
+                    grantUriPermissions(context, BuildConfig.SUNTIMES_APPLICATION_ID, getUriForFile(context, dstFile));
                 }
             } else {
                 Log.e("MapProvider", "init: required assets are missing!");
@@ -134,11 +137,20 @@ public class SuntimesMapAssets
         for (int i=0; i<ids.length; i++)
         {
             File file = new File(getFilesDir(context) + "/" + files[i]);
-            Uri uri = FileProvider.getUriForFile(context, "suntimes.mappack.fileprovider", file);
+            Uri uri = getUriForFile(context, file);
             MapProjections projection = MapProjections.find(projections[i]);
             ALL_BACKGROUNDS.add(new WorldMapBackgroundItem(null, ids[i], titles[i], summary[i],
                     (projection != null ? projection.getDisplayString() : "unknown"), projections[i],
                     uri.toString(), Boolean.parseBoolean(tint[i])));
+        }
+    }
+
+    protected static Uri getUriForFile(Context context, File file) {
+        return FileProvider.getUriForFile(context, "suntimes.mappack.fileprovider", file);
+    }
+    protected static void grantUriPermissions(Context context, String packageName, Uri uri) {
+        if (Build.VERSION.SDK_INT >= 19) {
+            context.grantUriPermission(packageName, uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
         }
     }
 
