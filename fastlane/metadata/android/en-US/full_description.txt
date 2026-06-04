@@ -1,0 +1,4 @@
+This is an addon for Suntimes that adds Blue Marble map imagery to the World Map dialog.
+It depends on [Suntimes v0.17.3](https://github.com/forrestguice/SuntimesWidget/) or later.
+
+Map backgrounds can also be downloaded from https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/downloadbackgrounds/index.html and loaded in Suntimes using the `Set Map Background` option. This addon offers a more convenient way to download and use these files.
