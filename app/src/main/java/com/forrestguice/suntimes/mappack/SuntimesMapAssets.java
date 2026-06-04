@@ -23,6 +23,7 @@ import android.content.res.AssetManager;
 import android.net.Uri;
 import android.util.Log;
 
+import com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract;
 import com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundItem;
 
 import java.io.File;
@@ -146,13 +147,13 @@ public class SuntimesMapAssets
      */
     public enum MapProjections
     {
-        EQUIRECTANGULAR("eqc", "Equirectangular"),
-        AZIMUTHAL_NORTH("aeqd_90,0", "Azimuthal North"),
-        AZIMUTHAL_SOUTH("aeqd_-90,0" ,"Azimuthal South"),
-        AZIMUTHAL_EQUIDISTANT("aeqd_", "Azimuthal Equidistant"),
-        MERCATOR("merc", "Mercator"),
-        SINUISOIDAL("sinu", "Mercator equal-area"),
-        VAN_DER_GRINTEN("vandg", "Van der Grinten");
+        EQUIRECTANGULAR(WorldMapBackgroundContract.PROJECTION_EQC, "Equirectangular"),
+        AZIMUTHAL_NORTH(WorldMapBackgroundContract.PROJECTION_AEQD_NORTH, "Azimuthal North"),
+        AZIMUTHAL_SOUTH(WorldMapBackgroundContract.PROJECTION_AEQD_SOUTH ,"Azimuthal South"),
+        AZIMUTHAL_EQUIDISTANT(WorldMapBackgroundContract.PROJECTION_AEQD_, "Azimuthal Equidistant"),
+        MERCATOR(WorldMapBackgroundContract.PROJECTION_MERC, "Mercator"),
+        SINUISOIDAL(WorldMapBackgroundContract.PROJECTION_SINU, "Mercator equal-area"),
+        VAN_DER_GRINTEN(WorldMapBackgroundContract.PROJECTION_VANDG, "Van der Grinten");
 
         MapProjections(String projection, String displayString) {
             this.projection = projection;

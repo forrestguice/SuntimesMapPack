@@ -21,6 +21,10 @@ package com.forrestguice.suntimeswidget.map.backgrounds;
  * WorldMapBackgroundContract
  * @version 1 (0.1.0)
  *
+ * Queries:
+ * content://authority/backgroundList               .. lists all backgrounds
+ * content://authority/backgroundList/<projection>  .. lists all backgrounds with given projection (e.g. eqc)
+ *
  * CHANGES
  *   1 initial version
  */
@@ -45,8 +49,12 @@ public interface WorldMapBackgroundContract
             COLUMN_BACKGROUND_FILE, COLUMN_BACKGROUND_TINT
     };
 
-    /*String QUERY_BACKGROUND_URI = "backgroundUri";
-    String[] QUERY_BACKGROUND_URI_PROJECTION = new String[] {
-            COLUMN_BACKGROUND_ID, COLUMN_BACKGROUND_PROJECTION, COLUMN_BACKGROUND_FILE
-    };*/
+    String PROJECTION_EQC = "eqc";
+    String PROJECTION_AEQD_NORTH = "aeqd_90,0";
+    String PROJECTION_AEQD_SOUTH = "aeqd_-90,0";
+    String PROJECTION_AEQD_ = "aeqd_";
+    String PROJECTION_MERC = "merc";
+    String PROJECTION_SINU = "sinu";
+    String PROJECTION_VANDG = "vandg";
+
 }
