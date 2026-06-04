@@ -42,6 +42,20 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/txt_about_desc"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="4dp" android:layout_marginLeft="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="12sp" android:text="@string/app_desc" />
+
+            <Button android:id="@+id/btn_worldmap"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:layout_margin="8dp"
+                android:text="@string/action_worldmap" />
+
+            <TextView
                 android:id="@+id/header_help"
                 android:layout_marginStart="4dp" android:layout_marginLeft="4dp"
                 android:layout_marginBottom="2dp"
@@ -55,14 +69,9 @@
                 android:layout_height="wrap_content" android:layout_width="wrap_content"
                 android:text="@string/help_general" android:textSize="12sp" />
 
-            <Button android:id="@+id/btn_worldmap"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="center" android:layout_margin="8dp"
-                android:text="@string/action_worldmap" />
-
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp" android:background="?attr/colorAccent" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" />
+                android:layout_height="2dp" android:background="?attr/colorAccent" android:layout_marginTop="12dp" android:layout_marginBottom="4dp" />
 
             <TextView
                 android:id="@+id/header_about"
@@ -70,15 +79,6 @@
                 android:layout_marginBottom="2dp"
                 android:layout_height="wrap_content" android:layout_width="wrap_content"
                 android:text="@string/action_about" android:textSize="16sp" android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txt_about_desc"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_marginStart="4dp" android:layout_marginLeft="4dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp" android:text="@string/app_desc" />
 
             <TextView
                 android:id="@+id/txt_about_version"
@@ -142,7 +142,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp" android:background="?attr/colorAccent" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" />
+                android:layout_height="2dp" android:background="?attr/colorAccent" android:layout_marginTop="12dp" android:layout_marginBottom="4dp" />
 
             <TextView
                 android:id="@+id/header_manifest"
