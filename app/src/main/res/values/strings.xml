@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Suntimes Map Pack</string>
+
+    <string name="projection_equirectangular">Equirectangular</string>
+    <string name="projection_azimuthal_north">Azimuthal North</string>
+    <string name="projection_azimuthal_south">Azimuthal South</string>
+    <string name="projection_azimuthal_equidistant">Azimuthal Equidistant</string>
+    <string name="projection_mercator">Mercator</string>
+    <string name="projection_sinuisoidal">Mercator equal-area</string>
+    <string name="projection_van_der_grinten">Van der Grinten</string>
+
 </resources>

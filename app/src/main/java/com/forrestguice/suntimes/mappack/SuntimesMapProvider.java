@@ -3,24 +3,15 @@ package com.forrestguice.suntimes.mappack;
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.content.UriMatcher;
-import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.database.MatrixCursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.util.Log;
 
 import com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundItem;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -51,7 +42,8 @@ public class SuntimesMapProvider extends ContentProvider
     @Override
     public boolean onCreate()
     {
-        initAssets(getContext());
+        SuntimesMapAssets.initAssets(getContext());
+        SuntimesMapAssets.MapProjections.initDisplayStrings(getContext());
         return false;
     }
 
@@ -78,7 +70,7 @@ public class SuntimesMapProvider extends ContentProvider
         Context context = getContext();
         if (context != null)
         {
-            for (WorldMapBackgroundItem item : getAllBackgroundItems())
+            for (WorldMapBackgroundItem item : SuntimesMapAssets.getAllBackgroundItems(context))
             {
                 Object[] row = new Object[columns.length];
                 for (int i=0; i<columns.length; i++)
@@ -107,6 +99,9 @@ public class SuntimesMapProvider extends ContentProvider
 
                         case COLUMN_BACKGROUND_FILE:
                             row[i] = item.getUri();
+                            if (Build.VERSION.SDK_INT >= 19) {
+                                context.grantUriPermission(getCallingPackage(), Uri.parse(item.getUri()), Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                            }
                             break;
                     }
                 }
@@ -140,71 +135,4 @@ public class SuntimesMapProvider extends ContentProvider
     public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
         return 0;
     }
-
-    /**
-     * initAssets; copies assets/maps/* into internalStorage/app/files
-     * @param context Context
-     */
-    protected void initAssets(Context context)
-    {
-        AssetManager assets = context.getAssets();
-        try {
-            String[] srcFiles = assets.list("maps");
-            if (srcFiles != null)
-            {
-                for (String srcFile : srcFiles)
-                {
-                    String dstPath = context.getFilesDir() + "/" + srcFile;
-                    File dstFile = new File(dstPath);
-                    if (!dstFile.exists())
-                    {
-                        try {
-                            InputStream input = assets.open(srcFile);
-                            OutputStream output = new FileOutputStream(dstPath);
-                            try {
-                                copyStream(input, output);
-                                Log.i("MapProvider", "initialized asset: " + dstPath);
-
-                            } finally {
-                                output.flush();
-                                output.close();
-                                input.close();
-                            }
-                        } catch (IOException e) {
-                            Log.e("MapProvider", "init: failed to initialize asset! " + dstPath, e);
-                        }
-                    }// else {
-                    //    Log.d("MapProvider", "init: " + dstFile.getName() + " already exists.");
-                    //}
-                }
-            } else {
-                Log.e("MapProvider", "init: required assets are missing!");
-            }
-        } catch (IOException e) {
-            Log.e("MapProvider", "init: failed to initialize assets!", e);
-        }
-    }
-
-    private void copyStream(InputStream in, OutputStream out) throws IOException
-    {
-        int r;
-        byte[] b = new byte[1024];
-        while ((r = in.read(b)) != -1) {
-            out.write(b, 0, r);
-        }
-    }
-
-
-    public static ArrayList<WorldMapBackgroundItem> ALL_BACKGROUNDS = new ArrayList<>();
-    static {
-        ALL_BACKGROUNDS.add(new WorldMapBackgroundItem(getAuthority(), "world_topo_bathy_aeqd_90_0", "Blue Marble Bathymetry (Polar North)", "Blue Marble Bathymetry (Polar North)", "Polar [north]", "aeqd_90,0", "TODO")); // TODO
-        ALL_BACKGROUNDS.add(new WorldMapBackgroundItem(getAuthority(), "world_topo_bathy_aeqd_n90_0", "Blue Marble Bathymetry (Polar South)", "Blue Marble Bathymetry (Polar South)", "Polar [south]", "aeqd_-90,0", "TODO")); // TODO
-        //public WorldMapBackgroundItem(String providerUri, int id, String title, String summary, String mapProjectionLabel, String mapProjection, String fileUri)
-        // TODO
-    }
-
-    public List<WorldMapBackgroundItem> getAllBackgroundItems() {
-        return ALL_BACKGROUNDS;
-    }
-
 }
