@@ -16,7 +16,7 @@ Map backgrounds can also be downloaded from https://forrestguice.github.io/Sunti
 <img alt="Equirectangular" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/land_shallow_topo_eqc_1024.jpg' width="280px" />
 <img alt="Polar [south]" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/land_shallow_topo_aeqd_-90,0.png' width="280px" />
 <img alt="Polar [north]" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/land_shallow_topo_aeqd_90,0.png' width="280px" />
-<img alt="Polar [north]" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/land_shallow_topo_aeqd_33,-111.png' width="280px" />
+<img alt="Azimuthal Equidistant (Phoenix)" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/land_shallow_topo_aeqd_33,-111.png' width="280px" />
 
 <img alt="Equirectangular" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/world_topo_bathy_eqc_1024.jpg' width="280px" />
 <img alt="Equirectangular" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/eo_base_2020_eqc_1024.png' width="280px" />
@@ -24,7 +24,7 @@ Map backgrounds can also be downloaded from https://forrestguice.github.io/Sunti
 <img alt="Van der Grinten" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/world_topo_bathy_vandg.png' width="280px" />
 <img alt="Polar [north]" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/world_topo_bathy_aeqd_90,0.png' width="280px" />
 <img alt="Polar [south]" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/world_topo_bathy_aeqd_-90,0.png' width="280px" />
-<img alt="Azimuthal Equidistant (North America)" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/world_topo_bathy_aeqd_33,-111.png' width="280px" />
+<img alt="Azimuthal Equidistant (Phoenix)" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/world_topo_bathy_aeqd_33,-111.png' width="280px" />
 <img alt="Azimuthal Equidistant (Cairo)" src='https://github.com/forrestguice/SuntimesMapPack/blob/app/assets/maps/world_topo_bathy_aeqd_30,31.png' width="280px" />
 
 
