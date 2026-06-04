@@ -22,6 +22,7 @@ android {
         def mappackAuthorityRoot = "suntimes.mappack"
 
         //buildConfigField "String", "GIT_HASH", "\"${getGitHash()}\""
+        buildConfigField "String", "GIT_HASH", "\"TODO\""
         manifestPlaceholders.suntimesApplicationId = "$suntimesApplicationId"
         manifestPlaceholders.suntimesPermissionRoot = "$suntimesPermissionRoot"
         manifestPlaceholders.mappackAuthorityRoot = "$mappackAuthorityRoot"
