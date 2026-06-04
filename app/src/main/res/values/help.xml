@@ -1,0 +1,31 @@
+<resources>
+    <string name="help_url" translatable="false">@string/help_cb_url</string>
+    <string name="help_app_url" translatable="false">@string/help_app_cb_url</string>
+    <string name="help_support_url" translatable="false">@string/help_support_gh_url</string>
+    <string name="help_source_url">@string/help_source_gh_url</string>
+    <string name="help_changelog_url">@string/help_changelog_gh_url</string>
+    <string name="help_commit_url">@string/help_commit_gh_url</string>
+
+    <!-- Codeberg Urls -->
+    <string name="help_cb_url" translatable="false">https://forrestguice.codeberg.page/Suntimes/help/</string>   <!-- must end with / -->
+    <string name="help_app_cb_url" translatable="false">https://forrestguice.codeberg.page/Suntimes</string>
+
+    <!-- Github Urls -->
+    <string name="help_gh_url" translatable="false">https://forrestguice.github.io/Suntimes/help/</string>   <!-- must end with / -->
+    <string name="help_app_gh_url" translatable="false">https://forrestguice.github.io/Suntimes/</string>
+    <string name="help_support_gh_url" translatable="false">https://github.com/forrestguice/SuntimesMapPack/issues</string>
+    <string name="help_source_gh_url" translatable="false">https://github.com/forrestguice/SuntimesMapPack</string>
+    <string name="help_changelog_gh_url" translatable="false">https://github.com/forrestguice/SuntimesMapPack/blob/master/CHANGELOG.md</string>
+    <string name="help_commit_gh_url" translatable="false">https://github.com/forrestguice/SuntimesMapPack/commit/</string>
+
+    <!-- Help Paths (these should be prefixed by `help_url`) -->
+    <string name="help_worldmap_path" translatable="false">dialogs/worldmap</string>
+    <string name="help_worldmap_background_path" translatable="false">dialogs/worldmap/#set-background</string>
+
+
+    <!-- Help Content -->
+    <string name="help_general"><![CDATA[
+    Use `<b>: -> Options -> Map Background</b>` from the World Map dialog to select from images matching the current map projection.<br/><br/>
+    ]]></string>
+
+</resources>

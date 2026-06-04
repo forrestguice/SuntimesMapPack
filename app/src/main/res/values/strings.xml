@@ -1,5 +1,27 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Suntimes Map Pack</string>
+    <string name="app_desc">A world map background expansion for Suntimes.</string>
+
+    <string name="about_app_version_field"><![CDATA[<b>Version:</b>]]> %1$s</string>
+    <string name="about_app_support_field"><![CDATA[
+        <b>Support:</b> visit the
+        <a href="%1$s">issue tracker</a> to submit a request.
+    ]]></string>
+
+    <string name="about_app_sourcecode_field"><![CDATA[
+        <b>Source Code:</b><br />
+        Copyright &#169 2026 Forrest Guice <br />
+        Source code available under GPLv3.
+    ]]></string>
+
+    <string name="about_libraryCreditsFormat" tools:common="true"><![CDATA[ %1$s ]]></string>
+    <string name="about_media_field"><![CDATA[ <b>Media:</b><br/> ]]>%1$s</string>
+    <string name="about_media_bluemarble" tools:common="true"><![CDATA[ NASA Earth Observatory. <i>Blue Marble: Next Generation</i>. ]]></string>
+    <string-array name="about_media">
+        <item>@string/about_media_bluemarble</item>
+    </string-array>
+
+    <string name="action_help">Help</string>
 
     <string name="projection_equirectangular">Equirectangular</string>
     <string name="projection_azimuthal_north">Azimuthal North</string>
