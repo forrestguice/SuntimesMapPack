@@ -11,6 +11,7 @@ import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -78,6 +79,26 @@ public class MainActivity extends AppCompatActivity
             }
             manifestView.setText(manifest);
         }
+
+        Button dialogButton = (Button) findViewById(R.id.btn_worldmap);
+        if (dialogButton != null) {
+            dialogButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    openWorldMapDialog(view.getContext());
+                }
+            });
+        }
+    }
+
+    public static final String ACTION_VIEW_WORLDMAP = "suntimes.action.VIEW_WORLDMAP";
+    protected void openWorldMapDialog(Context context)
+    {
+        Intent intent = new Intent();
+        intent.setClassName(BuildConfig.SUNTIMES_APPLICATION_ID, "com.forrestguice.suntimeswidget.SuntimesActivity");
+        intent.setAction(ACTION_VIEW_WORLDMAP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     public static String initCredits(Context context, int stringResId, int entryArrayResId, int entryFormatResId)

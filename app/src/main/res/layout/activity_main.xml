@@ -51,8 +51,14 @@
             <TextView
                 android:id="@+id/txt_help_general"
                 android:layout_marginStart="4dp" android:layout_marginLeft="4dp"
+                android:layout_marginBottom="4dp"
                 android:layout_height="wrap_content" android:layout_width="wrap_content"
                 android:text="@string/help_general" android:textSize="12sp" />
+
+            <Button android:id="@+id/btn_worldmap"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:layout_margin="8dp"
+                android:text="@string/action_worldmap" />
 
             <View
                 android:layout_width="match_parent"

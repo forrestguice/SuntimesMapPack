@@ -21,6 +21,7 @@
         <item>@string/about_media_bluemarble</item>
     </string-array>
 
+    <string name="action_worldmap">Open World Map</string>
     <string name="action_manifest">Manifest</string>
     <string name="action_help">Help</string>
     <string name="action_about">About</string>
