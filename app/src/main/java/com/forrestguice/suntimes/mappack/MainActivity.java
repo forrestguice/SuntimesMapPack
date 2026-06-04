@@ -29,13 +29,13 @@ public class MainActivity extends AppCompatActivity
     public void initViews(Context context)
     {
         TextView nameView = (TextView) findViewById(R.id.txt_about_name);
-        nameView.setOnClickListener(new View.OnClickListener()
+        /*nameView.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
                 openLink(v.getContext(), getString(R.string.help_app_url));
             }
-        });
+        });*/
 
         TextView versionView = (TextView) findViewById(R.id.txt_about_version);
         versionView.setMovementMethod(LinkMovementMethod.getInstance());
@@ -66,6 +66,17 @@ public class MainActivity extends AppCompatActivity
         TextView helpView = (TextView) findViewById(R.id.txt_help_general);
         if (helpView != null) {
             helpView.setText(fromHtml(helpView.getText().toString()));
+        }
+
+        TextView manifestView = (TextView) findViewById(R.id.txt_about_manifest);
+        if (manifestView != null)
+        {
+            StringBuilder manifest = new StringBuilder();
+            String[] files = getResources().getStringArray(R.array.background_file);
+            for (int i=0; i<files.length; i++) {
+                manifest.append(files[i]).append("\n");
+            }
+            manifestView.setText(manifest);
         }
     }
 

@@ -21,7 +21,9 @@
         <item>@string/about_media_bluemarble</item>
     </string-array>
 
+    <string name="action_manifest">Manifest</string>
     <string name="action_help">Help</string>
+    <string name="action_about">About</string>
 
     <string name="projection_equirectangular">Equirectangular</string>
     <string name="projection_azimuthal_north">Azimuthal North</string>
