@@ -124,6 +124,7 @@ public class SuntimesMapAssets
     {
         String[] ids = context.getResources().getStringArray(R.array.background_id);
         String[] files = context.getResources().getStringArray(R.array.background_file);
+        String[] tint = context.getResources().getStringArray(R.array.background_tint);
         String[] titles = context.getResources().getStringArray(R.array.background_title);
         String[] summary = context.getResources().getStringArray(R.array.background_summary);
         String[] projections = context.getResources().getStringArray(R.array.background_projection);
@@ -136,7 +137,7 @@ public class SuntimesMapAssets
             MapProjections projection = MapProjections.find(projections[i]);
             ALL_BACKGROUNDS.add(new WorldMapBackgroundItem(null, ids[i], titles[i], summary[i],
                     (projection != null ? projection.getDisplayString() : "unknown"), projections[i],
-                    uri.toString()));
+                    uri.toString(), Boolean.parseBoolean(tint[i])));
         }
     }
 

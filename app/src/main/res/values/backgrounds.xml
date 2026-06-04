@@ -86,4 +86,21 @@
         <item>EO Base 2020 (Equirectangular)</item>
     </string-array>
 
+    <string-array name="background_tint">
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+
+        <item>false</item>
+    </string-array>
+
 </resources>

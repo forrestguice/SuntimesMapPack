@@ -33,6 +33,7 @@ public interface WorldMapBackgroundContract
     String COLUMN_BACKGROUND_TITLE = "background_title";                        // short display string
     String COLUMN_BACKGROUND_SUMMARY = "background_summary";                    // long display string
     String COLUMN_BACKGROUND_FILE = "background_file";                          // file uri (string)
+    String COLUMN_BACKGROUND_TINT = "background_tint";                          // request tint flag (boolean)
     String COLUMN_BACKGROUND_PROJECTION = "background_projection";              // proj4 string
     String COLUMN_BACKGROUND_PROJECTION_LABEL = "background_projection_label";  // projection display string
 
@@ -41,12 +42,11 @@ public interface WorldMapBackgroundContract
             COLUMN_BACKGROUND_ID,
             COLUMN_BACKGROUND_TITLE, COLUMN_BACKGROUND_SUMMARY,
             COLUMN_BACKGROUND_PROJECTION, COLUMN_BACKGROUND_PROJECTION_LABEL,
-            COLUMN_BACKGROUND_FILE
+            COLUMN_BACKGROUND_FILE, COLUMN_BACKGROUND_TINT
     };
 
     /*String QUERY_BACKGROUND_URI = "backgroundUri";
     String[] QUERY_BACKGROUND_URI_PROJECTION = new String[] {
             COLUMN_BACKGROUND_ID, COLUMN_BACKGROUND_PROJECTION, COLUMN_BACKGROUND_FILE
     };*/
-
 }
