@@ -25,7 +25,9 @@
 
     <!-- Help Content -->
     <string name="help_general"><![CDATA[
-    Use `<b>: -> Options -> Map Background</b>` from the World Map dialog to select from images matching the current map projection.<br/><br/>
+        Use `<b>: -> Options -> Map Background</b>` from the World Map dialog to select from images matching the current map projection.
+        <br/><br/>
+        Use `<b>: -> Center -> Clear Background</b>` to reset to default.
     ]]></string>
 
 </resources>
