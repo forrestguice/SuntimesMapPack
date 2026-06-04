@@ -2,6 +2,7 @@
 <resources>
 
     <string-array name="background_id">
+        <item>world_topo_bathy_eqc</item>
         <item>world_topo_bathy_aeqd_north</item>
         <item>world_topo_bathy_aeqd_south</item>
         <item>world_topo_bathy_aeqd_cairo</item>
@@ -12,28 +13,30 @@
         <item>land_shallow_topo_aeqd_north</item>
         <item>land_shallow_topo_aeqd_south</item>
         <item>land_shallow_topo_aeqd_phoenix</item>
-
         <item>land_shallow_topo_eqc</item>
+
         <item>eo_base_2020_eqc</item>
     </string-array>
 
     <string-array name="background_file">
+        <item>world_topo_bathy_eqc_1024.jpg</item>
         <item>world_topo_bathy_aeqd_90,0.png</item>
         <item>world_topo_bathy_aeqd_-90,0.png</item>
         <item>world_topo_bathy_aeqd_30,31.png</item>
         <item>world_topo_bathy_aeqd_33,-111.png</item>
-        <item>world_topo_bathy_merg.png</item>
+        <item>world_topo_bathy_merc.png</item>
         <item>world_topo_bathy_vandg.png</item>
 
         <item>land_shallow_topo_aeqd_90,0.png</item>
         <item>land_shallow_topo_aeqd_-90,0.png</item>
         <item>land_shallow_topo_aeqd_33,-111.png</item>
-
         <item>land_shallow_topo_eqc_1024.jpg</item>
+
         <item>eo_base_2020_eqc_1024.png</item>
     </string-array>
 
     <string-array name="background_projection">
+        <item>eqc</item>
         <item>aeqd_90,0</item>
         <item>aeqd_-90,0</item>
         <item>aeqd_30,31</item>
@@ -44,28 +47,30 @@
         <item>aeqd_90,0</item>
         <item>aeqd_-90,0</item>
         <item>aeqd_33,-111</item>
-
         <item>eqc</item>
+
         <item>eqc</item>
     </string-array>
 
     <string-array name="background_title">
-        <item>Blue Marble Bathymetry 1</item>
-        <item>Blue Marble Bathymetry 2</item>
-        <item>Blue Marble Bathymetry 3</item>
-        <item>Blue Marble Bathymetry 4</item>
-        <item>Blue Marble Bathymetry 5</item>
-        <item>Blue Marble Bathymetry 6</item>
+        <item>Blue Marble (Bathymetry)</item>
+        <item>Blue Marble (Bathymetry)</item>
+        <item>Blue Marble (Bathymetry)</item>
+        <item>Blue Marble (Bathymetry)</item>
+        <item>Blue Marble (Bathymetry)</item>
+        <item>Blue Marble (Bathymetry)</item>
+        <item>Blue Marble (Bathymetry)</item>
 
-        <item>Blue Marble 1</item>
-        <item>Blue Marble 2</item>
-        <item>Blue Marble 3</item>
+        <item>Blue Marble</item>
+        <item>Blue Marble</item>
+        <item>Blue Marble</item>
+        <item>Blue Marble</item>
 
-        <item>Blue Marble 4</item>
         <item>EO Base 2020</item>
     </string-array>
 
     <string-array name="background_summary">
+        <item>Blue Marble Bathymetry (Equirectangular)</item>
         <item>Blue Marble Bathymetry (Polar [north])</item>
         <item>Blue Marble Bathymetry (Polar [south])</item>
         <item>Blue Marble Bathymetry (Azimuthal (Cairo))</item>
@@ -75,10 +80,10 @@
 
         <item>Blue Marble (Polar [north])</item>
         <item>Blue Marble (Polar [south])</item>
-        <item>Blue Marble (Azimuthal (Phoenix))</item>
+        <item>Blue Marble (Azimuthal (NA))</item>
+        <item>Blue Marble (Equirectangular)</item>
 
-        <item>Blue Marble</item>
-        <item>EO Base 2020</item>
+        <item>EO Base 2020 (Equirectangular)</item>
     </string-array>
 
 </resources>

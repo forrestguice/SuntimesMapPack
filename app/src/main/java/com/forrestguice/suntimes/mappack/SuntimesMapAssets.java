@@ -87,6 +87,19 @@ public class SuntimesMapAssets
         }
         return ALL_BACKGROUNDS;
     }
+    public static List<WorldMapBackgroundItem> getBackgroundItems(Context context, String mapProjection)
+    {
+        if (ALL_BACKGROUNDS == null) {
+            initBackgroundItems(context);
+        }
+        List<WorldMapBackgroundItem> items = new ArrayList<>();
+        for (WorldMapBackgroundItem item : ALL_BACKGROUNDS) {
+            if (item.getMapProjection().equals(mapProjection)) {
+                items.add(item);
+            }
+        }
+        return items;
+    }
 
     protected static ArrayList<WorldMapBackgroundItem> ALL_BACKGROUNDS = null;
     protected static void initBackgroundItems(Context context)

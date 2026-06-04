@@ -13,6 +13,8 @@ import android.util.Log;
 
 import com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundItem;
 
+import java.util.List;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -28,11 +30,13 @@ import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackground
 public class SuntimesMapProvider extends ContentProvider
 {
     private static final int URIMATCH_BACKGROUND_LIST = 0;
+    private static final int URIMATCH_BACKGROUND_LIST_BY_PROJ = 10;
 
     private static final UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
     static
     {
         uriMatcher.addURI(getAuthority(), QUERY_BACKGROUND_LIST, URIMATCH_BACKGROUND_LIST);
+        uriMatcher.addURI(getAuthority(), QUERY_BACKGROUND_LIST + "/*", URIMATCH_BACKGROUND_LIST_BY_PROJ);
     }
 
     public static String getAuthority() {
@@ -56,13 +60,19 @@ public class SuntimesMapProvider extends ContentProvider
         switch (uriMatch)
         {
             case URIMATCH_BACKGROUND_LIST:
-                cursor = queryBackgroundList(projection);
+                Log.d("DEBUG", "URIMATCH_BACKGROUND_LIST: " + uri);
+                cursor = queryBackgroundList(projection, null);
+                break;
+
+            case URIMATCH_BACKGROUND_LIST_BY_PROJ:
+                Log.d("DEBUG", "URIMATCH_BACKGROUND_LIST_BY_PROJ: " + uri + " :: " + uri.getLastPathSegment());
+                cursor = queryBackgroundList(projection, uri.getLastPathSegment());
                 break;
         }
         return cursor;
     }
 
-    public Cursor queryBackgroundList(@Nullable String[] projection)
+    public Cursor queryBackgroundList(@Nullable String[] projection, @Nullable String mapProjection)
     {
         String[] columns = (projection != null ? projection : QUERY_BACKGROUND_LIST_PROJECTION);
         MatrixCursor cursor = new MatrixCursor(columns);
@@ -70,7 +80,10 @@ public class SuntimesMapProvider extends ContentProvider
         Context context = getContext();
         if (context != null)
         {
-            for (WorldMapBackgroundItem item : SuntimesMapAssets.getAllBackgroundItems(context))
+            List<WorldMapBackgroundItem> items = (mapProjection != null
+                    ? SuntimesMapAssets.getBackgroundItems(context, mapProjection)
+                    : SuntimesMapAssets.getAllBackgroundItems(context));
+            for (WorldMapBackgroundItem item : items)
             {
                 Object[] row = new Object[columns.length];
                 for (int i=0; i<columns.length; i++)
