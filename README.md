@@ -13,19 +13,19 @@ It depends on [Suntimes v0.17.3](https://github.com/forrestguice/SuntimesWidget/
 
 Map backgrounds can also be [downloaded](https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/downloadbackgrounds/index.html) and loaded in Suntimes using the `Set Map Background` option. This addon offers a more convenient way to download and use these files.
 
-<img alt="Equirectangular" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/land_shallow_topo_eqc_1024.jpg' width="280px" />
-<img alt="Polar [south]" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/land_shallow_topo_aeqd_-90,0.png' width="280px" />
-<img alt="Polar [north]" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/land_shallow_topo_aeqd_90,0.png' width="280px" />
-<img alt="Azimuthal Equidistant (Phoenix)" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/land_shallow_topo_aeqd_33,-111.png' width="280px" />
+<img alt="Equirectangular" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/land_shallow_topo_eqc_1024.jpg' width="280px" />
+<img alt="Polar [south]" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/land_shallow_topo_aeqd_-90,0.png' width="280px" />
+<img alt="Polar [north]" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/land_shallow_topo_aeqd_90,0.png' width="280px" />
+<img alt="Azimuthal Equidistant (Phoenix)" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/land_shallow_topo_aeqd_33,-111.png' width="280px" />
 
-<img alt="Equirectangular" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/world_topo_bathy_eqc_1024.jpg' width="280px" />
-<img alt="Equirectangular" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/eo_base_2020_eqc_1024.png' width="280px" />
-<img alt="Mercator" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/world_topo_bathy_merc.png' width="280px" />
-<img alt="Van der Grinten" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/world_topo_bathy_vandg.png' width="280px" />
-<img alt="Polar [north]" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/world_topo_bathy_aeqd_90,0.png' width="280px" />
-<img alt="Polar [south]" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/world_topo_bathy_aeqd_-90,0.png' width="280px" />
-<img alt="Azimuthal Equidistant (Phoenix)" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/world_topo_bathy_aeqd_33,-111.png' width="280px" />
-<img alt="Azimuthal Equidistant (Cairo)" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/assets/maps/world_topo_bathy_aeqd_30,31.png' width="280px" />
+<img alt="Equirectangular" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/world_topo_bathy_eqc_1024.jpg' width="280px" />
+<img alt="Equirectangular" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/eo_base_2020_eqc_1024.png' width="280px" />
+<img alt="Mercator" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/world_topo_bathy_merc.png' width="280px" />
+<img alt="Van der Grinten" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/world_topo_bathy_vandg.png' width="280px" />
+<img alt="Polar [north]" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/world_topo_bathy_aeqd_90,0.png' width="280px" />
+<img alt="Polar [south]" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/world_topo_bathy_aeqd_-90,0.png' width="280px" />
+<img alt="Azimuthal Equidistant (Phoenix)" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/world_topo_bathy_aeqd_33,-111.png' width="280px" />
+<img alt="Azimuthal Equidistant (Cairo)" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/app/src/assets/maps/world_topo_bathy_aeqd_30,31.png' width="280px" />
 
 
 ## Donations ##
