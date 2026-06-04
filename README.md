@@ -16,7 +16,6 @@ Map backgrounds can also be [downloaded](https://forrestguice.github.io/Suntimes
 <img alt="Equirectangular" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_land_shallow_topo_eqc_1024.jpg' width="280px" />
 <img alt="Polar [south]" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_land_shallow_topo_aeqd_-90,0.png' width="280px" />
 <img alt="Polar [north]" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_land_shallow_topo_aeqd_90,0.png' width="280px" />
-<img alt="Azimuthal Equidistant (Phoenix)" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_land_shallow_topo_aeqd_33,-111.png' width="280px" />
 
 <img alt="Equirectangular" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_eo_base_2020_eqc_1024.png' width="280px" />
 
