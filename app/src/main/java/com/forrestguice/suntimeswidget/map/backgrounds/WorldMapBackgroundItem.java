@@ -18,16 +18,19 @@
 
 package com.forrestguice.suntimeswidget.map.backgrounds;
 
+import android.util.Log;
+
 public class WorldMapBackgroundItem
 {
     public WorldMapBackgroundItem() {}
-    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjectionLabel, String mapProjection, String fileUri, boolean tint)
+    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjectionLabel, String mapProjection, String mapProjectionCenter, String fileUri, boolean tint)
     {
         this.provider_uri = providerUri;
         this.id = id;
         this.title = title;
         this.summary = summary;
         this.map_projection_label = mapProjectionLabel;
+        this.map_projection_center = parseCenter(mapProjectionCenter);
         this.map_projection = mapProjection;
         this.file_uri = fileUri;
         this.tint = tint;
@@ -61,6 +64,29 @@ public class WorldMapBackgroundItem
         return map_projection_label;
     }
 
+    protected double[] map_projection_center;
+    public void setMapProjectionCenter(String s) {
+        map_projection_center = parseCenter(s);
+    }
+    public double[] getMapProjectionCenter() {
+        return map_projection_center;
+    }
+    public String getMapProjectionCenterAsString()
+    {
+        if (map_projection_center != null)
+        {
+            StringBuilder result = new StringBuilder();
+            for (int i=0; i<map_projection_center.length; i++)
+            {
+                result.append(map_projection_center[i]);
+                if (i != map_projection_center.length-1) {
+                    result.append(",");
+                }
+            }
+            return result.toString();
+        } else return null;
+    }
+
     protected String provider_uri;
     public String getProviderUri() {
         return provider_uri;
@@ -74,6 +100,25 @@ public class WorldMapBackgroundItem
     protected boolean tint;
     public boolean shouldTint() {
         return tint;
+    }
+
+    public static double[] parseCenter(String s)
+    {
+        double[] center = null;
+        String[] center0 = (s != null ? s.split(",") : null);
+        if (center0 != null)
+        {
+            try {
+                center = new double[center0.length];
+                for (int i=0; i<center0.length; i++) {
+                    center[i] =  Double.parseDouble(center0[i]);
+                }
+            } catch (NumberFormatException e) {
+                Log.e("MapProvider", "getCenter", e);
+                return null;
+            }
+        }
+        return center;
     }
 }
 

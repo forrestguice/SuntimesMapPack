@@ -39,8 +39,10 @@ import androidx.annotation.Nullable;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_FILE;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_ID;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION;
+import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION_CENTER;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION_LABEL;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_SUMMARY;
+import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_TINT;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_TITLE;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.QUERY_BACKGROUND_LIST;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.QUERY_BACKGROUND_LIST_PROJECTION;
@@ -128,12 +130,20 @@ public class SuntimesMapProvider extends ContentProvider
                             row[i] = item.getMapProjectionLabel();
                             break;
 
+                        case COLUMN_BACKGROUND_PROJECTION_CENTER:
+                            row[i] = item.getMapProjectionCenterAsString();
+                            break;
+
+                        case COLUMN_BACKGROUND_TINT:
+                            row[i] = Boolean.toString(item.shouldTint());
+                            break;
+
                         case COLUMN_BACKGROUND_FILE:
                             row[i] = item.getUri();
                             if (Build.VERSION.SDK_INT >= 19) {
-                                if (!BuildConfig.SUNTIMES_APPLICATION_ID.equals(getCallingPackage())) {   // Suntimes already has required permissions by default
+                                //if (!BuildConfig.SUNTIMES_APPLICATION_ID.equals(getCallingPackage())) {   // Suntimes already has required permissions by default
                                     context.grantUriPermission(getCallingPackage(), Uri.parse(item.getUri()), Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                                }
+                                //}
                             }
                             break;
                     }

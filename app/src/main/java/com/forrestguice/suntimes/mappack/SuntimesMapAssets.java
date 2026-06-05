@@ -34,6 +34,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import androidx.annotation.Nullable;
@@ -115,9 +117,22 @@ public class SuntimesMapAssets
             initBackgroundItems(context);
         }
         List<WorldMapBackgroundItem> items = new ArrayList<>();
-        for (WorldMapBackgroundItem item : ALL_BACKGROUNDS) {
-            if (item.getMapProjection().equals(mapProjection)) {
-                items.add(item);
+
+        if (mapProjection.startsWith(WorldMapBackgroundContract.PROJECTION_AEQD_)
+                && !mapProjection.equals(WorldMapBackgroundContract.PROJECTION_AEQD_NORTH)
+                && !mapProjection.equals(WorldMapBackgroundContract.PROJECTION_AEQD_SOUTH))
+        {
+            for (WorldMapBackgroundItem item : ALL_BACKGROUNDS) {
+                if (item.getMapProjection().startsWith(WorldMapBackgroundContract.PROJECTION_AEQD_)) {
+                    items.add(item);
+                }
+            }
+
+        } else {
+            for (WorldMapBackgroundItem item : ALL_BACKGROUNDS) {
+                if (item.getMapProjection().equals(mapProjection)) {
+                    items.add(item);
+                }
             }
         }
         return items;
@@ -132,6 +147,7 @@ public class SuntimesMapAssets
         String[] titles = context.getResources().getStringArray(R.array.background_title);
         String[] summary = context.getResources().getStringArray(R.array.background_summary);
         String[] projections = context.getResources().getStringArray(R.array.background_projection);
+        String[] centers = context.getResources().getStringArray(R.array.background_center);
 
         ALL_BACKGROUNDS = new ArrayList<>();
         for (int i=0; i<ids.length; i++)
@@ -139,10 +155,19 @@ public class SuntimesMapAssets
             File file = new File(getFilesDir(context) + "/" + files[i]);
             Uri uri = getUriForFile(context, file);
             MapProjections projection = MapProjections.find(projections[i]);
+
             ALL_BACKGROUNDS.add(new WorldMapBackgroundItem(null, ids[i], titles[i], summary[i],
-                    (projection != null ? projection.getDisplayString() : "unknown"), projections[i],
+                    (projection != null ? projection.getDisplayString() : "unknown"), projections[i], centers[i],
                     uri.toString(), Boolean.parseBoolean(tint[i])));
         }
+
+        Collections.sort(ALL_BACKGROUNDS, new Comparator<WorldMapBackgroundItem>()
+        {
+            @Override
+            public int compare(WorldMapBackgroundItem o, WorldMapBackgroundItem o1) {
+                return o.getTitle().compareTo(o1.getTitle());
+            }
+        });
     }
 
     protected static Uri getUriForFile(Context context, File file) {
