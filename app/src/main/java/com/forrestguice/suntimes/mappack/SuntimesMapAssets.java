@@ -25,6 +25,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
 
+import com.forrestguice.suntimes.mappack.maps.MapManifest;
+import com.forrestguice.suntimes.mappack.maps.MapDefinition;
 import com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract;
 import com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundItem;
 
@@ -36,7 +38,9 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
@@ -53,6 +57,7 @@ public class SuntimesMapAssets
             Log.e("MapProvider", "init: null context!");
             return;
         }
+
         AssetManager assets = context.getAssets();
         try {
             String[] srcFiles = assets.list("maps");
@@ -109,7 +114,7 @@ public class SuntimesMapAssets
         if (ALL_BACKGROUNDS == null) {
             initBackgroundItems(context);
         }
-        return ALL_BACKGROUNDS;
+        return new ArrayList<>(ALL_BACKGROUNDS.values());
     }
     public static List<WorldMapBackgroundItem> getBackgroundItems(Context context, String mapProjection)
     {
@@ -122,25 +127,47 @@ public class SuntimesMapAssets
                 && !mapProjection.equals(WorldMapBackgroundContract.PROJECTION_AEQD_NORTH)
                 && !mapProjection.equals(WorldMapBackgroundContract.PROJECTION_AEQD_SOUTH))
         {
-            for (WorldMapBackgroundItem item : ALL_BACKGROUNDS) {
+            for (WorldMapBackgroundItem item : ALL_BACKGROUNDS.values()) {
                 if (item.getMapProjection().startsWith(WorldMapBackgroundContract.PROJECTION_AEQD_)) {
                     items.add(item);
                 }
             }
 
         } else {
-            for (WorldMapBackgroundItem item : ALL_BACKGROUNDS) {
+            for (WorldMapBackgroundItem item : ALL_BACKGROUNDS.values()) {
                 if (item.getMapProjection().equals(mapProjection)) {
                     items.add(item);
                 }
             }
         }
+
+        Collections.sort(items, new Comparator<WorldMapBackgroundItem>()
+        {
+            @Override
+            public int compare(WorldMapBackgroundItem o, WorldMapBackgroundItem o1) {
+                return o.getTitle().compareTo(o1.getTitle());
+            }
+        });
         return items;
     }
 
-    protected static ArrayList<WorldMapBackgroundItem> ALL_BACKGROUNDS = null;
+    protected static Map<String,WorldMapBackgroundItem> ALL_BACKGROUNDS = null;
     protected static void initBackgroundItems(Context context)
     {
+        ALL_BACKGROUNDS = new HashMap<>();
+        List<MapDefinition> definitions = MapManifest.getDefinitions();
+        for (int i=0; i<definitions.size(); i++)
+        {
+            MapDefinition definition = definitions.get(i);
+            if (definition != null && !definition.isInitialized())
+            {
+                definition.initialize(context);
+                if (!ALL_BACKGROUNDS.containsKey(definition.getID())) {
+                    ALL_BACKGROUNDS.put(definition.getID(), definition);
+                }
+            }
+        }
+
         String[] ids = context.getResources().getStringArray(R.array.background_id);
         String[] files = context.getResources().getStringArray(R.array.background_file);
         String[] tint = context.getResources().getStringArray(R.array.background_tint);
@@ -149,28 +176,25 @@ public class SuntimesMapAssets
         String[] projections = context.getResources().getStringArray(R.array.background_projection);
         String[] centers = context.getResources().getStringArray(R.array.background_center);
 
-        ALL_BACKGROUNDS = new ArrayList<>();
         for (int i=0; i<ids.length; i++)
         {
+            if (ALL_BACKGROUNDS.containsKey(ids[i])) {
+                Log.d("MapProvider", "background " + ids[i] + " is already defined; skipping...");
+                continue;
+            }
+
             File file = new File(getFilesDir(context) + "/" + files[i]);
             Uri uri = getUriForFile(context, file);
             MapProjections projection = MapProjections.find(projections[i]);
 
-            ALL_BACKGROUNDS.add(new WorldMapBackgroundItem(null, ids[i], titles[i], summary[i],
+            ALL_BACKGROUNDS.put(ids[i], new WorldMapBackgroundItem(null, ids[i], titles[i], summary[i],
                     (projection != null ? projection.getDisplayString() : "unknown"), projections[i], centers[i],
                     uri.toString(), Boolean.parseBoolean(tint[i])));
+            Log.d("MapProvider", "initialized " + ids[i]);
         }
-
-        Collections.sort(ALL_BACKGROUNDS, new Comparator<WorldMapBackgroundItem>()
-        {
-            @Override
-            public int compare(WorldMapBackgroundItem o, WorldMapBackgroundItem o1) {
-                return o.getTitle().compareTo(o1.getTitle());
-            }
-        });
     }
 
-    protected static Uri getUriForFile(Context context, File file) {
+    public static Uri getUriForFile(Context context, File file) {
         return FileProvider.getUriForFile(context, "suntimes.mappack.fileprovider", file);
     }
     protected static void grantUriPermissions(Context context, String packageName, Uri uri) {
