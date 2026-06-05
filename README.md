@@ -54,3 +54,5 @@ The source code is available under [GPLv3](LICENSE) (https://github.com/forrestg
 
 Map imagery from:
 * NASA Earth Observatory. "Blue Marble: Next Generation" [Public Domain] (https://visibleearth.nasa.gov/view_cat.php?categoryID=1484)
+* NOAA National Centers for Environmental Information. 2022: ETOPO 2022 15 Arc-Second Global Relief Model. NOAA National Centers for Environmental Information. DOI: 10.25921/fd45-gt74.
+* World_Bedrock_Digital_Elevation_Model. By Kevin M. Gill - https://www.flickr.com/photos/53460575@N03/5853039006/, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=95394543

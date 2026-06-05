@@ -50,10 +50,9 @@
                 android:layout_marginBottom="8dp"
                 android:textSize="12sp" android:text="@string/app_desc" />
 
-            <Button android:id="@+id/btn_worldmap"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="center" android:layout_margin="8dp"
-                android:text="@string/action_worldmap" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp" android:background="?attr/colorAccent" android:layout_marginTop="12dp" android:layout_marginBottom="4dp" />
 
             <TextView
                 android:id="@+id/header_help"
@@ -68,6 +67,11 @@
                 android:layout_marginBottom="4dp"
                 android:layout_height="wrap_content" android:layout_width="wrap_content"
                 android:text="@string/help_general" android:textSize="12sp" />
+
+            <Button android:id="@+id/btn_worldmap"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:layout_margin="12dp"
+                android:text="@string/action_worldmap" />
 
             <View
                 android:layout_width="match_parent"
@@ -141,10 +145,12 @@
                 android:autoLink="web" />
 
             <View
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="2dp" android:background="?attr/colorAccent" android:layout_marginTop="12dp" android:layout_marginBottom="4dp" />
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/header_manifest"
                 android:layout_marginStart="4dp" android:layout_marginLeft="4dp"
                 android:layout_marginBottom="2dp"
@@ -152,6 +158,7 @@
                 android:text="@string/action_manifest" android:textSize="16sp" android:textStyle="bold" />
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/txt_about_manifest"
                 android:layout_marginStart="4dp" android:layout_marginLeft="4dp"
                 android:layout_height="wrap_content" android:layout_width="wrap_content"

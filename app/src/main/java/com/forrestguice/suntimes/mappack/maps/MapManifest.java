@@ -35,9 +35,10 @@ public final class MapManifest
 
     /*
      * To add maps:
-     * 1) copy the background file into assets/maps
-     * 2) extends from MapDefinition
+     * 1) copy the background file into `assets/maps`
+     * 2) extends from `MapDefinition`
      * 3) call add from the static block below
+     * 4) include attribution in `about-media` array
      */
     static {
         add(new BlueMarble_Bathy_AEQD_Cairo());

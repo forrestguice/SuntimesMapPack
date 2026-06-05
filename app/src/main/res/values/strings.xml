@@ -14,12 +14,8 @@
         Source code available under GPLv3.
     ]]></string>
 
-    <string name="about_libraryCreditsFormat" tools:common="true"><![CDATA[ %1$s ]]></string>
+    <string name="about_libraryCreditsFormat" tools:common="true"><![CDATA[* %1$s ]]></string>
     <string name="about_media_field"><![CDATA[ <b>Media:</b><br/> ]]>%1$s</string>
-    <string name="about_media_bluemarble" tools:common="true"><![CDATA[ NASA Earth Observatory. <i>Blue Marble: Next Generation</i>. ]]></string>
-    <string-array name="about_media">
-        <item>@string/about_media_bluemarble</item>
-    </string-array>
 
     <string name="action_worldmap">Open World Map</string>
     <string name="action_manifest">Manifest</string>
