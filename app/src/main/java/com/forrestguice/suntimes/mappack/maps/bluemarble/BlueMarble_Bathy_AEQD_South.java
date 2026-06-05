@@ -1,4 +1,6 @@
-package com.forrestguice.suntimes.mappack.maps;
+package com.forrestguice.suntimes.mappack.maps.bluemarble;
+
+import com.forrestguice.suntimes.mappack.maps.MapDefinition_AEQD_South;
 
 public class BlueMarble_Bathy_AEQD_South extends MapDefinition_AEQD_South
 {

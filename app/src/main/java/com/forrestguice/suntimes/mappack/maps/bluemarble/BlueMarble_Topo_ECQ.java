@@ -1,4 +1,6 @@
-package com.forrestguice.suntimes.mappack.maps;
+package com.forrestguice.suntimes.mappack.maps.bluemarble;
+
+import com.forrestguice.suntimes.mappack.maps.MapDefinition_ECQ;
 
 public class BlueMarble_Topo_ECQ extends MapDefinition_ECQ
 {

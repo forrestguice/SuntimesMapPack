@@ -1,4 +1,6 @@
-package com.forrestguice.suntimes.mappack.maps;
+package com.forrestguice.suntimes.mappack.maps.bluemarble;
+
+import com.forrestguice.suntimes.mappack.maps.MapDefinition_AEQD;
 
 public class BlueMarble_Bathy_AEQD_Cairo extends MapDefinition_AEQD
 {

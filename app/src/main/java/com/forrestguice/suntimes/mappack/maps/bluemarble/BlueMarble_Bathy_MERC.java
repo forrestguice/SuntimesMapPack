@@ -1,4 +1,6 @@
-package com.forrestguice.suntimes.mappack.maps;
+package com.forrestguice.suntimes.mappack.maps.bluemarble;
+
+import com.forrestguice.suntimes.mappack.maps.MapDefinition_MERC;
 
 public class BlueMarble_Bathy_MERC extends MapDefinition_MERC
 {
