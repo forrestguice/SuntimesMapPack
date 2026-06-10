@@ -21,6 +21,8 @@ package com.forrestguice.suntimes.mappack;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
@@ -114,7 +116,7 @@ public class SuntimesMapAssets
         if (ALL_BACKGROUNDS == null) {
             initBackgroundItems(context);
         }
-        return new ArrayList<>(ALL_BACKGROUNDS.values());
+        return sortItems(context, new ArrayList<>(ALL_BACKGROUNDS.values()));
     }
     public static List<WorldMapBackgroundItem> getBackgroundItems(Context context, String mapProjection)
     {
@@ -141,10 +143,22 @@ public class SuntimesMapAssets
             }
         }
 
+        sortItems(context, items);
+        return items;
+    }
+
+    protected static List<WorldMapBackgroundItem> sortItems(Context context, List<WorldMapBackgroundItem> items)
+    {
         Collections.sort(items, new Comparator<WorldMapBackgroundItem>()
         {
+            String defaultTitle = context.getString(R.string.default_item_title);
+
             @Override
-            public int compare(WorldMapBackgroundItem o, WorldMapBackgroundItem o1) {
+            public int compare(WorldMapBackgroundItem o, WorldMapBackgroundItem o1)
+            {
+                if (defaultTitle.equals(o.getTitle())) {
+                    return -1;
+                }
                 return o.getTitle().compareTo(o1.getTitle());
             }
         });
@@ -155,30 +169,76 @@ public class SuntimesMapAssets
     protected static void initBackgroundItems(Context context)
     {
         ALL_BACKGROUNDS = new HashMap<>();
-        List<MapDefinition> definitions = MapManifest.getDefinitions();
-        for (int i=0; i<definitions.size(); i++)
+        MapManifest.initBackgroundItems(context, ALL_BACKGROUNDS);
+        initBackgroundItems_manifests(context, ALL_BACKGROUNDS);
+        initBackgroundItems_arrays(context, ALL_BACKGROUNDS);
+    }
+
+    protected static void initBackgroundItems_manifests(Context context, Map<String,WorldMapBackgroundItem> map)
+    {
+        Resources res = context.getResources();
+        TypedArray manifests = res.obtainTypedArray(R.array.map_manifests);
+        Log.i("MapProvider", "found " + manifests.length() + " map manifests.");
+
+        for (int i=0; i<manifests.length(); i++)
         {
-            MapDefinition definition = definitions.get(i);
-            if (definition != null && !definition.isInitialized())
+            int manifestId = manifests.getResourceId(i, 0);
+            if (manifestId != 0)
             {
-                definition.initialize(context);
-                if (!ALL_BACKGROUNDS.containsKey(definition.getID())) {
-                    ALL_BACKGROUNDS.put(definition.getID(), definition);
+                String manifestName = res.getResourceEntryName(manifestId);
+                TypedArray manifest = res.obtainTypedArray(manifestId);
+                Log.i("MapProvider", "found " + manifest.length() + " items in " + manifestName);
+                for (int j=0; j<manifest.length(); j++)
+                {
+                    int itemId = manifest.getResourceId(j, 0);
+                    if (itemId != 0)
+                    {
+                        String mapID = res.getResourceEntryName(itemId);
+                        String[] mapItem = res.getStringArray(itemId);
+
+                        WorldMapBackgroundItem item = new WorldMapBackgroundItem(null, mapID, mapItem);
+                        if (item.isValid())
+                        {
+                            File file = new File(getFilesDir(context) + "/" + item.getUri());
+                            if (file.exists())
+                            {
+                                item.setUri(getUriForFile(context, file).toString());
+                                map.put(item.getID(), item);
+                                Log.d("MapProvider", "initialized " + item.getID());
+
+                            } else {
+                                Log.w("MapProvider", "Item assets for " + mapID + " not found! " + item.getUri());
+                            }
+                        } else {
+                            Log.e("MapProvider", "Item is invalid: " + mapID + "; ignoring...");
+                        }
+                    } else {
+                        Log.e("MapProvider", "Manifest item at line " + j + " not found!");
+                    }
                 }
+                manifest.recycle();
+
+            } else {
+                Log.e("MapProvider", "Manifest at line " + i + " not found!.");
             }
         }
+        manifests.recycle();
+    }
 
-        String[] ids = context.getResources().getStringArray(R.array.background_id);
-        String[] files = context.getResources().getStringArray(R.array.background_file);
-        String[] tint = context.getResources().getStringArray(R.array.background_tint);
-        String[] titles = context.getResources().getStringArray(R.array.background_title);
-        String[] summary = context.getResources().getStringArray(R.array.background_summary);
-        String[] projections = context.getResources().getStringArray(R.array.background_projection);
-        String[] centers = context.getResources().getStringArray(R.array.background_center);
+    protected static void initBackgroundItems_arrays(Context context, Map<String,WorldMapBackgroundItem> map)
+    {
+        Resources res = context.getResources();
+        String[] ids = res.getStringArray(R.array.background_id);
+        String[] files = res.getStringArray(R.array.background_file);
+        String[] tint = res.getStringArray(R.array.background_tint);
+        String[] titles = res.getStringArray(R.array.background_title);
+        String[] summary = res.getStringArray(R.array.background_summary);
+        String[] projections = res.getStringArray(R.array.background_projection);
+        String[] centers = res.getStringArray(R.array.background_center);
 
         for (int i=0; i<ids.length; i++)
         {
-            if (ALL_BACKGROUNDS.containsKey(ids[i])) {
+            if (map.containsKey(ids[i])) {
                 Log.d("MapProvider", "background " + ids[i] + " is already defined; skipping...");
                 continue;
             }
@@ -187,9 +247,9 @@ public class SuntimesMapAssets
             Uri uri = getUriForFile(context, file);
             MapProjections projection = MapProjections.find(projections[i]);
 
-            ALL_BACKGROUNDS.put(ids[i], new WorldMapBackgroundItem(null, ids[i], titles[i], summary[i],
+            map.put(ids[i], new WorldMapBackgroundItem(null, ids[i], titles[i], summary[i],
                     (projection != null ? projection.getDisplayString() : "unknown"), projections[i], centers[i],
-                    uri.toString(), Boolean.parseBoolean(tint[i])));
+                    uri.toString(), tint[i]));
             Log.d("MapProvider", "initialized " + ids[i]);
         }
     }

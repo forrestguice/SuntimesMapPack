@@ -14,6 +14,8 @@
         Source code available under GPLv3.
     ]]></string>
 
+    <string name="default_item_title">Default</string>
+
     <string name="about_libraryCreditsFormat" tools:common="true"><![CDATA[* %1$s ]]></string>
     <string name="about_media_field"><![CDATA[ <b>Media:</b><br/> ]]>%1$s</string>
 

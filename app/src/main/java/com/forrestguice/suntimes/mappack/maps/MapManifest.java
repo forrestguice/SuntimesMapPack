@@ -18,10 +18,13 @@
 
 package com.forrestguice.suntimes.mappack.maps;
 
-import com.forrestguice.suntimes.mappack.maps.bluemarble.*;
+import android.content.Context;
+
+import com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundItem;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public final class MapManifest
 {
@@ -33,8 +36,23 @@ public final class MapManifest
         return maps;
     }
 
+    public static void initBackgroundItems(Context context, Map<String, WorldMapBackgroundItem> map)
+    {
+        List<MapDefinition> definitions = MapManifest.getDefinitions();
+        for (int i=0; i<definitions.size(); i++)
+        {
+            MapDefinition definition = definitions.get(i);
+            if (definition != null && !definition.isInitialized())
+            {
+                definition.initialize(context);
+                if (!map.containsKey(definition.getID())) {
+                    map.put(definition.getID(), definition);
+                }
+            }
+        }
+    }
+
     /*
-     * To add maps:
      * To add maps to hardcoded manifest:
      * 1) copy the background file into `assets/maps`
      * 2) extends from `MapDefinition`
@@ -42,17 +60,6 @@ public final class MapManifest
      * 4) include attribution in `about-media` array
      */
     static {
-        add(new BlueMarble_Bathy_AEQD_Cairo());
-        add(new BlueMarble_Bathy_AEQD_North());
-        add(new BlueMarble_Bathy_AEQD_Phoenix());
-        add(new BlueMarble_Bathy_AEQD_South());
-        add(new BlueMarble_Bathy_ECQ());
-        add(new BlueMarble_Bathy_MERC());
-        add(new BlueMarble_Bathy_VANDG());
-        add(new BlueMarble_Topo_AEQD_North());
-        add(new BlueMarble_Topo_AEQD_Phoenix());
-        add(new BlueMarble_Topo_AEQD_South());
-        add(new BlueMarble_Topo_ECQ());
         add(new BaseMaps.BaseMap_AEQD_North());
         add(new BaseMaps.BaseMap_AEQD_South());
         add(new BaseMaps.BaseMap_ECQ());
@@ -60,4 +67,5 @@ public final class MapManifest
         add(new BaseMaps.BaseMap_SINU());
         add(new BaseMaps.BaseMap_VANDG());
     }
+
 }

@@ -23,7 +23,7 @@ import android.util.Log;
 public class WorldMapBackgroundItem
 {
     public WorldMapBackgroundItem() {}
-    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjectionLabel, String mapProjection, String mapProjectionCenter, String fileUri, boolean tint)
+    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjectionLabel, String mapProjection, String mapProjectionCenter, String fileUri, String tint)
     {
         this.provider_uri = providerUri;
         this.id = id;
@@ -33,7 +33,26 @@ public class WorldMapBackgroundItem
         this.map_projection_center = parseCenter(mapProjectionCenter);
         this.map_projection = mapProjection;
         this.file_uri = fileUri;
-        this.tint = tint;
+        this.tint = Boolean.parseBoolean(tint);
+        isValid = true;
+    }
+
+    public WorldMapBackgroundItem(String provider_uri, String id, String[] manifest)
+    {
+        this.provider_uri = provider_uri;
+        this.id = id;
+        this.file_uri = manifest[0];
+        this.title = manifest[1];
+        this.summary = manifest[2];
+        this.map_projection = manifest[3];
+        this.map_projection_center = parseCenter(manifest[4]);
+        this.tint = Boolean.parseBoolean(manifest[5]);
+        isValid = true;
+    }
+
+    protected boolean isValid = false;
+    public boolean isValid() {
+        return isValid;
     }
 
     protected String id = null;
@@ -93,6 +112,9 @@ public class WorldMapBackgroundItem
     }
 
     protected String file_uri;
+    public void setUri(String value) {
+        file_uri = value;
+    }
     public String getUri() {
         return file_uri;
     }
