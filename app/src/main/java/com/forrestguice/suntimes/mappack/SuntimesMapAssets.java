@@ -42,6 +42,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import androidx.annotation.Nullable;
@@ -123,7 +124,7 @@ public class SuntimesMapAssets
         if (ALL_BACKGROUNDS == null) {
             initBackgroundItems(context);
         }
-        List<WorldMapBackgroundItem> items = new ArrayList<>();
+        ArrayList<WorldMapBackgroundItem> items = new ArrayList<>();
 
         if (mapProjection.startsWith(WorldMapBackgroundContract.PROJECTION_AEQD_)
                 && !mapProjection.equals(WorldMapBackgroundContract.PROJECTION_AEQD_NORTH)
@@ -147,19 +148,21 @@ public class SuntimesMapAssets
         return items;
     }
 
-    protected static List<WorldMapBackgroundItem> sortItems(Context context, List<WorldMapBackgroundItem> items)
+    protected static List<WorldMapBackgroundItem> sortItems(Context context, ArrayList<WorldMapBackgroundItem> items)
     {
+        final String defaultTitle = context.getString(R.string.default_item_title).toLowerCase(Locale.ROOT).trim();
         Collections.sort(items, new Comparator<WorldMapBackgroundItem>()
         {
-            String defaultTitle = context.getString(R.string.default_item_title);
-
             @Override
             public int compare(WorldMapBackgroundItem o, WorldMapBackgroundItem o1)
             {
-                if (defaultTitle.equals(o.getTitle())) {
+                if (defaultTitle.equals(o.getTitle().toLowerCase(Locale.ROOT).trim())) {
                     return -1;
+                } else if (defaultTitle.equals(o1.getTitle().toLowerCase(Locale.ROOT).trim())) {
+                    return 1;
+                } else {
+                    return o.getTitle().compareTo(o1.getTitle());
                 }
-                return o.getTitle().compareTo(o1.getTitle());
             }
         });
         return items;
