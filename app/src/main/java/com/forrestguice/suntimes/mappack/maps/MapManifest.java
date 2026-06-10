@@ -35,6 +35,7 @@ public final class MapManifest
 
     /*
      * To add maps:
+     * To add maps to hardcoded manifest:
      * 1) copy the background file into `assets/maps`
      * 2) extends from `MapDefinition`
      * 3) call add from the static block below
@@ -52,5 +53,11 @@ public final class MapManifest
         add(new BlueMarble_Topo_AEQD_Phoenix());
         add(new BlueMarble_Topo_AEQD_South());
         add(new BlueMarble_Topo_ECQ());
+        add(new BaseMaps.BaseMap_AEQD_North());
+        add(new BaseMaps.BaseMap_AEQD_South());
+        add(new BaseMaps.BaseMap_ECQ());
+        add(new BaseMaps.BaseMap_MERC());
+        add(new BaseMaps.BaseMap_SINU());
+        add(new BaseMaps.BaseMap_VANDG());
     }
 }
