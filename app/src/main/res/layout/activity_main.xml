@@ -136,6 +136,17 @@
                 android:text="@string/help_source_url"
                 android:autoLink="web" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp" android:background="?attr/colorAccent" android:layout_marginTop="12dp" android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/header_media"
+                android:layout_marginStart="4dp" android:layout_marginLeft="4dp"
+                android:layout_marginBottom="2dp"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"
+                android:text="@string/action_about_media" android:textSize="16sp" android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/txt_about_media"
                 android:layout_marginStart="4dp" android:layout_marginLeft="4dp"

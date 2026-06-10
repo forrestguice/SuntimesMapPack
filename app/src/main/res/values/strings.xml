@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Suntimes Map Pack</string>
-    <string name="app_desc">A world map background expansion pack for Suntimes.</string>
+    <string name="app_desc">A collection of world map backgrounds for Suntimes.</string>
 
     <string name="about_app_version_field"><![CDATA[<b>Version:</b>]]> %1$s</string>
     <string name="about_app_support_field"><![CDATA[
@@ -16,13 +16,14 @@
 
     <string name="default_item_title">Default</string>
 
-    <string name="about_libraryCreditsFormat" tools:common="true"><![CDATA[* %1$s ]]></string>
-    <string name="about_media_field"><![CDATA[ <b>Media:</b><br/> ]]>%1$s</string>
+    <string name="about_libraryCreditsFormat" tools:common="true"><![CDATA[%1$s <br />]]></string>
+    <string name="about_media_field">%1$s</string>
 
     <string name="action_worldmap">Open World Map</string>
     <string name="action_manifest">Manifest</string>
     <string name="action_help">Help</string>
     <string name="action_about">About</string>
+    <string name="action_about_media">Media</string>
 
     <string name="projection_equirectangular">Equirectangular</string>
     <string name="projection_azimuthal_north">Azimuthal North</string>
