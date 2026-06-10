@@ -18,18 +18,18 @@
 
 package com.forrestguice.suntimeswidget.map.backgrounds;
 
-import android.util.Log;
-
+/**
+ * @see WorldMapBackgroundContract
+ */
 public class WorldMapBackgroundItem
 {
     public WorldMapBackgroundItem() {}
-    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjectionLabel, String mapProjection, String mapProjectionCenter, String fileUri, String tint)
+    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjection, String mapProjectionCenter, String fileUri, String tint)
     {
         this.provider_uri = providerUri;
         this.id = id;
         this.title = title;
         this.summary = summary;
-        this.map_projection_label = mapProjectionLabel;
         this.map_projection_center = parseCenter(mapProjectionCenter);
         this.map_projection = mapProjection;
         this.file_uri = fileUri;
@@ -51,11 +51,17 @@ public class WorldMapBackgroundItem
     }
 
     protected boolean isValid = false;
+    public void setIsValid(boolean value) {
+        isValid = value;
+    }
     public boolean isValid() {
         return isValid;
     }
 
     protected String id = null;
+    public void setID(String value) {
+        id = value;
+    }
     public String getID() {
         return id;
     }
@@ -69,18 +75,19 @@ public class WorldMapBackgroundItem
     }
 
     protected String summary;
+    public void setSummary(String value) {
+        summary = value;
+    }
     public String getSummary() {
         return summary;
     }
 
     protected String map_projection;
+    public void setMapProjection(String value) {
+         map_projection = value;
+    }
     public String getMapProjection() {
         return map_projection;
-    }
-
-    protected String map_projection_label;
-    public String getMapProjectionLabel() {
-        return map_projection_label;
     }
 
     protected double[] map_projection_center;
@@ -107,6 +114,9 @@ public class WorldMapBackgroundItem
     }
 
     protected String provider_uri;
+    public void setProviderUri(String value) {
+        provider_uri = value;
+    }
     public String getProviderUri() {
         return provider_uri;
     }
@@ -120,10 +130,17 @@ public class WorldMapBackgroundItem
     }
 
     protected boolean tint;
+    public void setShouldTint(boolean value) {
+        tint = value;
+    }
     public boolean shouldTint() {
         return tint;
     }
 
+    /**
+     * @param s containing "latitude,longitude" string. e.g. "90,0" centers on north pole.
+     * @return [90d,0d] or null if s was invalid
+     */
     public static double[] parseCenter(String s)
     {
         double[] center = null;
@@ -136,11 +153,9 @@ public class WorldMapBackgroundItem
                     center[i] =  Double.parseDouble(center0[i]);
                 }
             } catch (NumberFormatException e) {
-                Log.e("MapProvider", "getCenter", e);
                 return null;
             }
         }
         return center;
     }
 }
-

@@ -27,6 +27,5 @@ public abstract class MapDefinition_AEQD extends MapDefinition
     {
         super();
         this.map_projection = WorldMapBackgroundContract.PROJECTION_AEQD_;
-        this.map_projection_label = SuntimesMapAssets.MapProjections.AZIMUTHAL_EQUIDISTANT.getDisplayString();
     }
 }

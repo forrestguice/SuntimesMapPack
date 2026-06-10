@@ -40,7 +40,6 @@ import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackground
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_ID;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION_CENTER;
-import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION_LABEL;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_SUMMARY;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_TINT;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_TITLE;
@@ -124,10 +123,6 @@ public class SuntimesMapProvider extends ContentProvider
 
                         case COLUMN_BACKGROUND_PROJECTION:
                             row[i] = item.getMapProjection();
-                            break;
-
-                        case COLUMN_BACKGROUND_PROJECTION_LABEL:
-                            row[i] = item.getMapProjectionLabel();
                             break;
 
                         case COLUMN_BACKGROUND_PROJECTION_CENTER:

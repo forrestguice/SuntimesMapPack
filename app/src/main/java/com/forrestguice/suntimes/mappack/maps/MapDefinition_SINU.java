@@ -27,6 +27,5 @@ public abstract class MapDefinition_SINU extends MapDefinition
     {
         super();
         this.map_projection = WorldMapBackgroundContract.PROJECTION_SINU;
-        this.map_projection_label = SuntimesMapAssets.MapProjections.SINUISOIDAL.getDisplayString();
     }
 }

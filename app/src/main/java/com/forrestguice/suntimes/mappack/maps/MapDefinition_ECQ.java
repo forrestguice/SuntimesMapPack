@@ -27,6 +27,5 @@ public abstract class MapDefinition_ECQ extends MapDefinition
     {
         super();
         this.map_projection = WorldMapBackgroundContract.PROJECTION_EQC;
-        this.map_projection_label = SuntimesMapAssets.MapProjections.EQUIRECTANGULAR.getDisplayString();
     }
 }

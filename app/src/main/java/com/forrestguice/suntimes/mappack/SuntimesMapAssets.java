@@ -247,8 +247,7 @@ public class SuntimesMapAssets
             Uri uri = getUriForFile(context, file);
             MapProjections projection = MapProjections.find(projections[i]);
 
-            map.put(ids[i], new WorldMapBackgroundItem(null, ids[i], titles[i], summary[i],
-                    (projection != null ? projection.getDisplayString() : "unknown"), projections[i], centers[i],
+            map.put(ids[i], new WorldMapBackgroundItem(null, ids[i], titles[i], summary[i], projections[i], centers[i],
                     uri.toString(), tint[i]));
             Log.d("MapProvider", "initialized " + ids[i]);
         }

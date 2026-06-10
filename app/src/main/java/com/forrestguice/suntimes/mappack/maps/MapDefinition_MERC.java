@@ -27,6 +27,5 @@ public abstract class MapDefinition_MERC extends MapDefinition
     {
         super();
         this.map_projection = WorldMapBackgroundContract.PROJECTION_MERC;
-        this.map_projection_label = SuntimesMapAssets.MapProjections.MERCATOR.getDisplayString();
     }
 }

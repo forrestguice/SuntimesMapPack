@@ -27,7 +27,6 @@ public abstract class MapDefinition_AEQD_South extends MapDefinition
     {
         super();
         this.map_projection = WorldMapBackgroundContract.PROJECTION_AEQD_SOUTH;
-        this.map_projection_label = SuntimesMapAssets.MapProjections.AZIMUTHAL_SOUTH.getDisplayString();
         this.map_projection_center = new double[] { -90, 0 };
     }
 }

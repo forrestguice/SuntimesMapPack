@@ -27,6 +27,5 @@ public abstract class MapDefinition_VANDG extends MapDefinition
     {
         super();
         this.map_projection = WorldMapBackgroundContract.PROJECTION_VANDG;
-        this.map_projection_label = SuntimesMapAssets.MapProjections.VAN_DER_GRINTEN.getDisplayString();
     }
 }
