@@ -9,7 +9,7 @@
         <item>@array/blue_marble_bathy_aeqd_north</item>
         <item>@array/blue_marble_bathy_aeqd_south</item>
         <item>@array/blue_marble_bathy_merc</item>
-        <!--<item>@array/blue_marble_bathy_sinu</item>-->
+        <item>@array/blue_marble_bathy_sinu</item>
         <item>@array/blue_marble_bathy_vandg</item>
     </array>
 
@@ -68,7 +68,7 @@
     </string-array>
 
     <string-array name="blue_marble_bathy_sinu">
-        <item>world_topo_bathy_sinu.png</item>              <!-- file -->     <!-- TODO -->
+        <item>world_topo_bathy_sinu.png</item>              <!-- file -->
         <item>Blue Marble + Bathymetry</item>               <!-- title -->
         <item>Blue Marble + Bathymetry</item>               <!-- summary -->
         <item>sinu</item>                                   <!-- projection -->

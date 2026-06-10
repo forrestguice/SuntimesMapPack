@@ -22,7 +22,7 @@
 
     <string-array name="world_bedrock_dem_aeqd_north">
         <item>world_bedrock_dem_adeq_90,0.png</item>     <!-- file -->
-        <item>World Bedrock DEM</item>                        <!-- title -->
+        <item>North: World Bedrock DEM</item>                        <!-- title -->
         <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
         <item>aeqd_90,0</item>                             <!-- projection -->
         <item>90,0</item>                                  <!-- projection center -->
@@ -31,7 +31,7 @@
 
     <string-array name="world_bedrock_dem_aeqd_south">
         <item>world_bedrock_dem_adeq_-90,0.png</item>     <!-- file -->
-        <item>World Bedrock DEM</item>                        <!-- title -->
+        <item>South: World Bedrock DEM</item>                        <!-- title -->
         <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
         <item>aeqd_-90,0</item>                             <!-- projection -->
         <item>-90,0</item>                                  <!-- projection center -->
