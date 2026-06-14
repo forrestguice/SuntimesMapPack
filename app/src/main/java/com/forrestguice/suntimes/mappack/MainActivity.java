@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity
         if (manifestView != null)
         {
             StringBuilder manifest = new StringBuilder();
-            String[] files = getResources().getStringArray(R.array.background_file);
+            String[] files = getResources().getStringArray(R.array.background_day_file);
             for (int i=0; i<files.length; i++) {
                 manifest.append(files[i]).append("\n");
             }

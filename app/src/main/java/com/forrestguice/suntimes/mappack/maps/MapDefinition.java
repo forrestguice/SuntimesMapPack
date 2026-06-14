@@ -39,7 +39,9 @@ public abstract class MapDefinition extends WorldMapBackgroundItem
     {
         if (!initialized)
         {
-            file_uri = SuntimesMapAssets.getUriForFile(context, new File(SuntimesMapAssets.getFilesDir(context) + "/" + file_uri)).toString();
+            file_day_uri = SuntimesMapAssets.getUriForFile(context, new File(SuntimesMapAssets.getFilesDir(context) + "/" + file_day_uri)).toString();
+            file_night_uri = (file_night_uri != null ? SuntimesMapAssets.getUriForFile(context, new File(SuntimesMapAssets.getFilesDir(context) + "/" + file_night_uri)).toString() : null);
+
             if (summary == null) {
                 summary = title;
             }

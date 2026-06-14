@@ -24,7 +24,7 @@ package com.forrestguice.suntimeswidget.map.backgrounds;
 public class WorldMapBackgroundItem
 {
     public WorldMapBackgroundItem() {}
-    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjection, String mapProjectionCenter, String fileUri, String tint)
+    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjection, String mapProjectionCenter, String dayFileUri, String nightFileUri, String tint)
     {
         this.provider_uri = providerUri;
         this.id = id;
@@ -32,7 +32,8 @@ public class WorldMapBackgroundItem
         this.summary = summary;
         this.map_projection_center = parseCenter(mapProjectionCenter);
         this.map_projection = mapProjection;
-        this.file_uri = fileUri;
+        this.file_day_uri = dayFileUri;
+        this.file_night_uri = nightFileUri;
         this.tint = Boolean.parseBoolean(tint);
         isValid = true;
     }
@@ -41,12 +42,13 @@ public class WorldMapBackgroundItem
     {
         this.provider_uri = provider_uri;
         this.id = id;
-        this.file_uri = manifest[0];
-        this.title = manifest[1];
-        this.summary = manifest[2];
-        this.map_projection = manifest[3];
-        this.map_projection_center = parseCenter(manifest[4]);
-        this.tint = Boolean.parseBoolean(manifest[5]);
+        this.file_day_uri = manifest[0];
+        this.file_night_uri = manifest[1];
+        this.title = manifest[2];
+        this.summary = manifest[3];
+        this.map_projection = manifest[4];
+        this.map_projection_center = parseCenter(manifest[5]);
+        this.tint = Boolean.parseBoolean(manifest[6]);
         isValid = true;
     }
 
@@ -84,7 +86,7 @@ public class WorldMapBackgroundItem
 
     protected String map_projection;
     public void setMapProjection(String value) {
-         map_projection = value;
+        map_projection = value;
     }
     public String getMapProjection() {
         return map_projection;
@@ -121,12 +123,20 @@ public class WorldMapBackgroundItem
         return provider_uri;
     }
 
-    protected String file_uri;
-    public void setUri(String value) {
-        file_uri = value;
+    protected String file_day_uri;
+    public void setDayUri(String value) {
+        file_day_uri = value;
     }
-    public String getUri() {
-        return file_uri;
+    public String getDayUri() {
+        return file_day_uri;
+    }
+
+    protected String file_night_uri;
+    public void setNightUri(String value) {
+        file_night_uri = value;
+    }
+    public String getNightUri() {
+        return file_night_uri;
     }
 
     protected boolean tint;
