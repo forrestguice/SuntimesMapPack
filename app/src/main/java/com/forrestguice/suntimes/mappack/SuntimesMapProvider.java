@@ -36,14 +36,14 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_FILE_DAY;
-import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_FILE_NIGHT;
+import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_FILE;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_ID;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION_CENTER;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_SUMMARY;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_TINT;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_TITLE;
+import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.COLUMN_BACKGROUND_TYPE;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.QUERY_BACKGROUND_LIST;
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.QUERY_BACKGROUND_LIST_PROJECTION;
 
@@ -110,6 +110,10 @@ public class SuntimesMapProvider extends ContentProvider
                 {
                     switch (columns[i])
                     {
+                        case COLUMN_BACKGROUND_TYPE:
+                            row[i] = item.getType();
+                            break;
+
                         case COLUMN_BACKGROUND_ID:
                             row[i] = item.getID();
                             break;
@@ -134,21 +138,10 @@ public class SuntimesMapProvider extends ContentProvider
                             row[i] = Boolean.toString(item.shouldTint());
                             break;
 
-                        case COLUMN_BACKGROUND_FILE_DAY:
-                            row[i] = item.getDayUri();
+                        case COLUMN_BACKGROUND_FILE:
+                            row[i] = item.getUri();
                             if (Build.VERSION.SDK_INT >= 19) {
-                                //if (!BuildConfig.SUNTIMES_APPLICATION_ID.equals(getCallingPackage())) {   // Suntimes already has required permissions by default
-                                    context.grantUriPermission(getCallingPackage(), Uri.parse(item.getDayUri()), Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                                //}
-                            }
-                            break;
-
-                        case COLUMN_BACKGROUND_FILE_NIGHT:
-                            row[i] = item.getNightUri();
-                            if (row[i] != null) {
-                                if (Build.VERSION.SDK_INT >= 19) {
-                                    context.grantUriPermission(getCallingPackage(), Uri.parse(item.getNightUri()), Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                                }
+                                context.grantUriPermission(getCallingPackage(), Uri.parse(item.getUri()), Intent.FLAG_GRANT_READ_URI_PERMISSION);
                             }
                             break;
                     }

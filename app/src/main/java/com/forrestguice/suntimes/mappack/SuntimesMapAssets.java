@@ -201,23 +201,15 @@ public class SuntimesMapAssets
                         WorldMapBackgroundItem item = new WorldMapBackgroundItem(null, mapID, mapItem);
                         if (item.isValid())
                         {
-                            if (item.getNightUri() != null)
+                            File file = new File(getFilesDir(context) + "/" + item.getUri());
+                            if (file.exists())
                             {
-                                File nightFile = new File(getFilesDir(context) + "/" + item.getNightUri());
-                                if (nightFile.exists()) {
-                                    item.setNightUri(getUriForFile(context, nightFile).toString());
-                                }
-                            }
-
-                            File dayFile = new File(getFilesDir(context) + "/" + item.getDayUri());
-                            if (dayFile.exists())
-                            {
-                                item.setDayUri(getUriForFile(context, dayFile).toString());
+                                item.setUri(getUriForFile(context, file).toString());
                                 map.put(item.getID(), item);
                                 Log.d("MapProvider", "initialized " + item.getID());
 
                             } else {
-                                Log.w("MapProvider", "Item assets for " + mapID + " not found! " + item.getDayUri());
+                                Log.w("MapProvider", "Item assets for " + mapID + " not found! " + item.getUri());
                             }
                         } else {
                             Log.e("MapProvider", "Item is invalid: " + mapID + "; ignoring...");
@@ -240,7 +232,7 @@ public class SuntimesMapAssets
         Resources res = context.getResources();
         String[] ids = res.getStringArray(R.array.background_id);
         String[] files_day = res.getStringArray(R.array.background_day_file);
-        String[] files_night = res.getStringArray(R.array.background_night_file);
+        String[] types = res.getStringArray(R.array.background_type);
         String[] tint = res.getStringArray(R.array.background_tint);
         String[] titles = res.getStringArray(R.array.background_title);
         String[] summary = res.getStringArray(R.array.background_summary);
@@ -254,15 +246,12 @@ public class SuntimesMapAssets
                 continue;
             }
 
-            File dayFile = new File(getFilesDir(context) + "/" + files_day[i]);
-            String dayUri = getUriForFile(context, dayFile).toString();
-
-            File nightFile = (files_night[i] != null ? new File(getFilesDir(context) + "/" + files_night[i]) : null);
-            String nightUri = (nightFile != null ? getUriForFile(context, nightFile).toString() : null);
+            File file = new File(getFilesDir(context) + "/" + files_day[i]);
+            String uri = getUriForFile(context, file).toString();
 
             //MapProjections projection = MapProjections.find(projections[i]);
-            map.put(ids[i], new WorldMapBackgroundItem(null, ids[i], titles[i], summary[i], projections[i], centers[i],
-                    dayUri, nightUri, tint[i]));
+            map.put(ids[i], new WorldMapBackgroundItem(null, types[i], ids[i], titles[i], summary[i], projections[i], centers[i],
+                    uri, tint[i]));
             Log.d("MapProvider", "initialized " + ids[i]);
         }
     }

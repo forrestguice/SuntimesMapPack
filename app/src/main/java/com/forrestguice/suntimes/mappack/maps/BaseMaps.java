@@ -6,7 +6,7 @@ public class BaseMaps
     {
         public BaseMap_ECQ() {
             super();
-            this.file_day_uri = "basemap_eqc.png";
+            this.file_uri = "basemap_eqc.png";
             this.title = "Default";
             this.tint = true;
         }
@@ -16,7 +16,7 @@ public class BaseMaps
     {
         public BaseMap_AEQD_North() {
             super();
-            this.file_day_uri = "basemap_aeqd_north.png";
+            this.file_uri = "basemap_aeqd_north.png";
             this.title = "Default";
             this.tint = true;
         }
@@ -26,7 +26,7 @@ public class BaseMaps
     {
         public BaseMap_AEQD_South() {
             super();
-            this.file_day_uri = "basemap_aeqd_south.png";
+            this.file_uri = "basemap_aeqd_south.png";
             this.title = "Default";
             this.tint = true;
         }
@@ -36,7 +36,7 @@ public class BaseMaps
     {
         public BaseMap_MERC() {
             super();
-            this.file_day_uri = "basemap_merc.png";
+            this.file_uri = "basemap_merc.png";
             this.title = "Default";
             this.tint = true;
         }
@@ -46,7 +46,7 @@ public class BaseMaps
     {
         public BaseMap_VANDG() {
             super();
-            this.file_day_uri = "basemap_vandg.png";
+            this.file_uri = "basemap_vandg.png";
             this.title = "Default";
             this.tint = true;
         }
@@ -56,7 +56,7 @@ public class BaseMaps
     {
         public BaseMap_SINU() {
             super();
-            this.file_day_uri = "basemap_sinu.png";
+            this.file_uri = "basemap_sinu.png";
             this.title = "Default";
             this.tint = true;
         }

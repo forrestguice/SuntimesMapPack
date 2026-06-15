@@ -18,22 +18,24 @@
 
 package com.forrestguice.suntimeswidget.map.backgrounds;
 
+import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.TYPE_DAY;
+
 /**
  * @see WorldMapBackgroundContract
  */
 public class WorldMapBackgroundItem
 {
     public WorldMapBackgroundItem() {}
-    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjection, String mapProjectionCenter, String dayFileUri, String nightFileUri, String tint)
+    public WorldMapBackgroundItem(String providerUri, String type, String id, String title, String summary, String mapProjection, String mapProjectionCenter, String fileUri, String tint)
     {
         this.provider_uri = providerUri;
+        this.type = type;
         this.id = id;
         this.title = title;
         this.summary = summary;
         this.map_projection_center = parseCenter(mapProjectionCenter);
         this.map_projection = mapProjection;
-        this.file_day_uri = dayFileUri;
-        this.file_night_uri = nightFileUri;
+        this.file_uri = fileUri;
         this.tint = Boolean.parseBoolean(tint);
         isValid = true;
     }
@@ -42,8 +44,8 @@ public class WorldMapBackgroundItem
     {
         this.provider_uri = provider_uri;
         this.id = id;
-        this.file_day_uri = manifest[0];
-        this.file_night_uri = manifest[1];
+        this.file_uri = manifest[0];
+        this.type = manifest[1];
         this.title = manifest[2];
         this.summary = manifest[3];
         this.map_projection = manifest[4];
@@ -123,20 +125,12 @@ public class WorldMapBackgroundItem
         return provider_uri;
     }
 
-    protected String file_day_uri;
-    public void setDayUri(String value) {
-        file_day_uri = value;
+    protected String file_uri;
+    public void setUri(String value) {
+        file_uri = value;
     }
-    public String getDayUri() {
-        return file_day_uri;
-    }
-
-    protected String file_night_uri;
-    public void setNightUri(String value) {
-        file_night_uri = value;
-    }
-    public String getNightUri() {
-        return file_night_uri;
+    public String getUri() {
+        return file_uri;
     }
 
     protected boolean tint;
@@ -167,5 +161,13 @@ public class WorldMapBackgroundItem
             }
         }
         return center;
+    }
+
+    protected String type = TYPE_DAY;
+    public String getType() {
+        return type;
+    }
+    public void setType(String value) {
+        type = value;
     }
 }

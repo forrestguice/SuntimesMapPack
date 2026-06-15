@@ -13,7 +13,7 @@
 
     <string-array name="world_bedrock_dem_eqc">
         <item>world_bedrock_dem_eqc.png</item>       <!-- day file -->
-        <item>@null</item>                           <!-- night file -->
+        <item>day</item>
         <item>World Bedrock DEM</item>                  <!-- title -->
         <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
         <item>eqc</item>                             <!-- projection -->
@@ -23,7 +23,7 @@
 
     <string-array name="world_bedrock_dem_aeqd_north">
         <item>world_bedrock_dem_adeq_90,0.png</item>     <!-- day file -->
-        <item>@null</item>                               <!-- night file -->
+        <item>day</item>
         <item>North: World Bedrock DEM</item>                        <!-- title -->
         <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
         <item>aeqd_90,0</item>                             <!-- projection -->
@@ -33,7 +33,7 @@
 
     <string-array name="world_bedrock_dem_aeqd_south">
         <item>world_bedrock_dem_adeq_-90,0.png</item>     <!-- day file -->
-        <item>@null</item>                                <!-- night file -->
+        <item>day</item>
         <item>South: World Bedrock DEM</item>                        <!-- title -->
         <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
         <item>aeqd_-90,0</item>                             <!-- projection -->
@@ -43,7 +43,7 @@
 
     <string-array name="world_bedrock_dem_merc">
         <item>world_bedrock_dem_merc.png</item>     <!-- day file -->
-        <item>@null</item>                          <!-- night file -->
+        <item>day</item>
         <item>World Bedrock DEM</item>                  <!-- title -->
         <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
         <item>merc</item>                            <!-- projection -->
@@ -53,7 +53,7 @@
 
     <string-array name="world_bedrock_dem_sinu">
         <item>world_bedrock_dem_sinu.png</item>     <!-- day file -->
-        <item>@null</item>                          <!-- night file -->
+        <item>day</item>
         <item>World Bedrock DEM</item>                  <!-- title -->
         <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
         <item>sinu</item>                            <!-- projection -->
@@ -63,7 +63,7 @@
 
     <string-array name="world_bedrock_dem_vandg">
         <item>world_bedrock_dem_vandg.png</item>     <!-- day file -->
-        <item>@null</item>                           <!-- night file -->
+        <item>day</item>
         <item>World Bedrock DEM</item>                  <!-- title -->
         <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
         <item>vandg</item>                           <!-- projection -->
