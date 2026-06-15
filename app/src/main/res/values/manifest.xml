@@ -11,9 +11,21 @@
     <string-array name="about_media">
         <item>@string/about_blue_marble_2002</item>
         <item>@string/about_blue_marble_2004_bathy</item>
+        <item>@string/about_dmsp</item>
         <item>@string/about_solar_textures_earth</item>
         <item>@string/about_world_bedrock_dem</item>
         <item>@string/about_media_noaa_etopo</item>
+    </string-array>
+
+    <!-- Asset directories are registered here -->
+    <string-array name="map_assets">
+        <item>basemap</item>
+        <item>blue_marble_2002</item>
+        <item>blue_marble_next_gen</item>
+        <item>dmsp</item>
+        <item>misc</item>
+        <item>solar_textures</item>
+        <item>world_bedrock_dem</item>
     </string-array>
 
     <!-- Map manifests are registered here -->
@@ -23,6 +35,7 @@
         <item>@array/manifest_solar_textures_earth</item>
         <item>@array/manifest_solar_textures_earth_bathy</item>
         <item>@array/manifest_world_bedrock_dem</item>
+        <item>@array/manifest_dmsp</item>
     </array>
 
     <!--

@@ -1,0 +1,10 @@
+The files in this directory were created by re-projecting and layering the following source imagery:
+
+Solar Textures. Attribution 4.0 International license.
+https://www.solarsystemscope.com/textures/
+https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg
+https://www.solarsystemscope.com/textures/download/8k_earth_nightmap.jpg
+
+Blue Marble: Next Generation. NASA Earth Observatory.
+https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/topography-bathymetry-maps/
+

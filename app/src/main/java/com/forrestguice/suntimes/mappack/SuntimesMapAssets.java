@@ -49,11 +49,21 @@ import androidx.core.content.FileProvider;
 
 public class SuntimesMapAssets
 {
+    public static void initAssets(@Nullable Context context)
+    {
+        if (context != null) {
+            String[] assetDirs = context.getResources().getStringArray(R.array.map_assets);
+            for (String dir : assetDirs) {
+                initAssets(context, dir);
+            }
+        }
+    }
+
     /**
-     * initAssets; copies assets/maps/* into internalStorage/app/files and pre-grants uri permissions to Suntimes
+     * initAssets; copies assets/<assetDir>/* into internalStorage/app/files and pre-grants uri permissions to Suntimes
      * @param context Context
      */
-    public static void initAssets(@Nullable Context context)
+    public static void initAssets(@Nullable Context context, String assetDir)
     {
         if (context == null) {
             Log.e("MapProvider", "init: null context!");
@@ -62,12 +72,12 @@ public class SuntimesMapAssets
 
         AssetManager assets = context.getAssets();
         try {
-            String[] srcFiles = assets.list("maps");
+            String[] srcFiles = assets.list(assetDir);
             if (srcFiles != null)
             {
                 for (String srcFile : srcFiles)
                 {
-                    String srcPath = "maps/" + srcFile;
+                    String srcPath = assetDir + "/" + srcFile;
                     String dstPath = getFilesDir(context) + "/" + srcFile;
                     File dstFile = new File(dstPath);
                     if (!dstFile.exists())
@@ -206,7 +216,7 @@ public class SuntimesMapAssets
                             {
                                 item.setUri(getUriForFile(context, file).toString());
                                 map.put(item.getID(), item);
-                                Log.d("MapProvider", "initialized " + item.getID());
+                                Log.d("MapProvider", "initialized: " + item.getID());
 
                             } else {
                                 Log.w("MapProvider", "Item assets for " + mapID + " not found! " + item.getUri());

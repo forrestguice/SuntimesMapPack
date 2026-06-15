@@ -1,0 +1,4 @@
+The files in this directory were created by re-projecting the following source imagery:
+
+Earth at Night. NASA/Goddard Space Flight Center. 
+https://svs.gsfc.nasa.gov/vis/a030000/a030000/a030003/dmsp_4096.png

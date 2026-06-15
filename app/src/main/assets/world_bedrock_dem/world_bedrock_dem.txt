@@ -1,0 +1,4 @@
+The files in this directory were created by re-projecting the following source imagery:
+
+World Bedrock Digital Elevation Model. Kevin M. Gill, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=95394543.
+https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png

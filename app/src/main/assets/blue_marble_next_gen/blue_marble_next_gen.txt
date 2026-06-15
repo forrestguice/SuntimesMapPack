@@ -1,0 +1,4 @@
+The files in this directory were created by re-projecting the following source imagery:
+
+Blue Marble: Next Generation. NASA Earth Observatory
+https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-topography-bathymetry/

@@ -1,0 +1,4 @@
+The files in this directory were created by re-projecting the following source imagery:
+
+The Blue Marble. NASA Goddard Space Flight Center.
+https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/

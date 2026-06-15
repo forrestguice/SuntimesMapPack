@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="about_dmsp"><![CDATA[ <b>Earth at Night.</b> NASA/Goddard Space Flight Center. https://svs.gsfc.nasa.gov/vis/a030000/a030000/a030003/dmsp_4096.png ]]></string>
+    <string name="title_dmsp">Earth\'s City Lights [Bathymetry]</string>
+
+    <array name="manifest_dmsp">
+        <item>@array/dmsp_bathy_eqc</item>
+        <item>@array/dmsp_bathy_merc</item>
+        <item>@array/dmsp_bathy_sinu</item>
+        <item>@array/dmsp_bathy_vandg</item>
+    </array>
+
+    <string-array name="dmsp_bathy_eqc">
+        <item>dmsp_bathy_eqc4.png</item>                  <!-- file -->
+        <item>night</item>                                <!-- type -->
+        <item>@string/title_dmsp</item>                   <!-- title -->
+        <item>@string/about_dmsp</item>                   <!-- summary -->
+        <item>eqc</item>                                  <!-- projection -->
+        <item>@null</item>                                <!-- projection center -->
+        <item>false</item>                                <!-- tint -->
+    </string-array>
+
+    <string-array name="dmsp_bathy_merc">
+        <item>dmsp_bathy_merc2.png</item>                 <!-- file -->
+        <item>night</item>                                <!-- type -->
+        <item>@string/title_dmsp</item>                   <!-- title -->
+        <item>@string/about_dmsp</item>                   <!-- summary -->
+        <item>merc</item>                                 <!-- projection -->
+        <item>@null</item>                                <!-- projection center -->
+        <item>false</item>                                <!-- tint -->
+    </string-array>
+
+    <string-array name="dmsp_bathy_sinu">
+        <item>dmsp_bathy_sinu.png</item>                  <!-- night file -->
+        <item>night</item>                                <!-- type -->
+        <item>@string/title_dmsp</item>                   <!-- title -->
+        <item>@string/about_dmsp</item>                   <!-- summary -->
+        <item>sinu</item>                                 <!-- projection -->
+        <item>@null</item>                                <!-- projection center -->
+        <item>false</item>                                <!-- tint -->
+    </string-array>
+
+    <string-array name="dmsp_bathy_vandg">
+        <item>dmsp_bathy_vandg2.png</item>                <!-- file -->
+        <item>night</item>                                <!-- type -->
+        <item>@string/title_dmsp</item>                   <!-- title -->
+        <item>@string/about_dmsp</item>                   <!-- summary -->
+        <item>vandg</item>                                <!-- projection -->
+        <item>@null</item>                                <!-- projection center -->
+        <item>false</item>                                <!-- tint -->
+    </string-array>
+
+</resources>
