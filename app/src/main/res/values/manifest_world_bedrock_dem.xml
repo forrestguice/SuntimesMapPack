@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_world_bedrock_dem"><![CDATA[ <b>World Bedrock Digital Elevation Model.</b> Kevin M. Gill, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=95394543 ]]></string>
+    <string name="about_world_bedrock_dem"><![CDATA[
+    <b>World Bedrock Digital Elevation Model.</b> Kevin M. Gill, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=95394543.
+    https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png
+    ]]></string>
 
     <array name="manifest_world_bedrock_dem">
         <item>@array/world_bedrock_dem_eqc</item>
@@ -12,60 +15,60 @@
     </array>
 
     <string-array name="world_bedrock_dem_eqc">
-        <item>world_bedrock_dem_eqc.png</item>       <!-- day file -->
-        <item>day</item>
-        <item>World Bedrock DEM</item>                  <!-- title -->
-        <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
+        <item>world_bedrock_dem_eqc.png</item>       <!-- file -->
+        <item>day</item>                             <!-- type -->
+        <item>World Bedrock DEM</item>               <!-- title -->
+        <item>@string/about_world_bedrock_dem</item> <!-- summary -->
         <item>eqc</item>                             <!-- projection -->
         <item>@null</item>                           <!-- projection center -->
         <item>false</item>                           <!-- tint -->
     </string-array>
 
     <string-array name="world_bedrock_dem_aeqd_north">
-        <item>world_bedrock_dem_adeq_90,0.png</item>     <!-- day file -->
-        <item>day</item>
-        <item>North: World Bedrock DEM</item>                        <!-- title -->
-        <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
-        <item>aeqd_90,0</item>                             <!-- projection -->
-        <item>90,0</item>                                  <!-- projection center -->
-        <item>false</item>                                 <!-- tint -->
+        <item>world_bedrock_dem_adeq_90,0.png</item>     <!-- file -->
+        <item>day</item>                                 <!-- type -->
+        <item>North: World Bedrock DEM</item>            <!-- title -->
+        <item>@string/about_world_bedrock_dem</item>     <!-- summary -->
+        <item>aeqd_90,0</item>                           <!-- projection -->
+        <item>90,0</item>                                <!-- projection center -->
+        <item>false</item>                               <!-- tint -->
     </string-array>
 
     <string-array name="world_bedrock_dem_aeqd_south">
-        <item>world_bedrock_dem_adeq_-90,0.png</item>     <!-- day file -->
-        <item>day</item>
-        <item>South: World Bedrock DEM</item>                        <!-- title -->
-        <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
-        <item>aeqd_-90,0</item>                             <!-- projection -->
-        <item>-90,0</item>                                  <!-- projection center -->
-        <item>false</item>                                  <!-- tint -->
+        <item>world_bedrock_dem_adeq_-90,0.png</item>     <!-- file -->
+        <item>day</item>                                  <!-- type -->
+        <item>South: World Bedrock DEM</item>             <!-- title -->
+        <item>@string/about_world_bedrock_dem</item>      <!-- summary -->
+        <item>aeqd_-90,0</item>                           <!-- projection -->
+        <item>-90,0</item>                                <!-- projection center -->
+        <item>false</item>                                <!-- tint -->
     </string-array>
 
     <string-array name="world_bedrock_dem_merc">
-        <item>world_bedrock_dem_merc.png</item>     <!-- day file -->
-        <item>day</item>
-        <item>World Bedrock DEM</item>                  <!-- title -->
-        <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
+        <item>world_bedrock_dem_merc.png</item>      <!-- file -->
+        <item>day</item>                             <!-- type -->
+        <item>World Bedrock DEM</item>               <!-- title -->
+        <item>@string/about_world_bedrock_dem</item> <!-- summary -->
         <item>merc</item>                            <!-- projection -->
         <item>@null</item>                           <!-- projection center -->
         <item>false</item>                           <!-- tint -->
     </string-array>
 
     <string-array name="world_bedrock_dem_sinu">
-        <item>world_bedrock_dem_sinu.png</item>     <!-- day file -->
-        <item>day</item>
-        <item>World Bedrock DEM</item>                  <!-- title -->
-        <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
+        <item>world_bedrock_dem_sinu.png</item>      <!-- file -->
+        <item>day</item>                             <!-- type -->
+        <item>World Bedrock DEM</item>               <!-- title -->
+        <item>@string/about_world_bedrock_dem</item> <!-- summary -->
         <item>sinu</item>                            <!-- projection -->
         <item>@null</item>                           <!-- projection center -->
         <item>false</item>                           <!-- tint -->
     </string-array>
 
     <string-array name="world_bedrock_dem_vandg">
-        <item>world_bedrock_dem_vandg.png</item>     <!-- day file -->
-        <item>day</item>
-        <item>World Bedrock DEM</item>                  <!-- title -->
-        <item>https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png</item>   <!-- summary -->
+        <item>world_bedrock_dem_vandg.png</item>     <!-- file -->
+        <item>day</item>                             <!-- type -->
+        <item>World Bedrock DEM</item>               <!-- title -->
+        <item>@string/about_world_bedrock_dem</item> <!-- summary -->
         <item>vandg</item>                           <!-- projection -->
         <item>@null</item>                           <!-- projection center -->
         <item>false</item>                           <!-- tint -->

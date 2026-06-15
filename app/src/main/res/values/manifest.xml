@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <string name="about_media_noaa_etopo"><![CDATA[ <b>ETOPO 2022 15 Arc-Second Global Relief Model.</b> NOAA National Centers for Environmental Information. DOI: 10.25921/fd45-gt74. ]]></string>
+    <string name="about_earthlights"><![CDATA[ <b>Earth Lights.</b> TODO ]]></string>
+
+    <string tools:ignore="TypographyDashes" name="about_media_noaa_etopo"><![CDATA[
+    <b>ETOPO 2022 15 Arc-Second Global Relief Model.</b> NOAA National Centers for Environmental Information. DOI: 10.25921/fd45-gt74.
+    https://www.ncei.noaa.gov/sites/default/files/2021-10/color_etopo1_ice_low.jpg
+    ]]></string>
 
     <string-array name="about_media">
-        <item>@string/about_blue_marble_topo</item>
-        <item>@string/about_media_noaa_etopo</item>
-        <item>@string/about_world_bedrock_dem</item>
+        <item>@string/about_blue_marble_2002</item>
+        <item>@string/about_blue_marble_2004_bathy</item>
         <item>@string/about_solar_textures_earth</item>
+        <item>@string/about_world_bedrock_dem</item>
+        <item>@string/about_media_noaa_etopo</item>
     </string-array>
 
     <!-- Map manifests are registered here -->
     <array name="map_manifests">
-        <item>@array/manifest_blue_marble_bathy</item>
-        <item>@array/manifest_blue_marble_topo</item>
+        <item>@array/manifest_blue_marble_2002</item>
+        <item>@array/manifest_blue_marble_2004_bathy</item>
         <item>@array/manifest_solar_textures_earth</item>
         <item>@array/manifest_solar_textures_earth_bathy</item>
         <item>@array/manifest_world_bedrock_dem</item>
@@ -61,7 +67,7 @@
     <string-array name="background_summary">
         <item>EO Base (2020)</item>
         <item>https://upload.wikimedia.org/wikipedia/commons/c/cf/WorldMap-A_non-Frame.png</item>
-        <item tools:ignore="TypographyDashes">https://www.ncei.noaa.gov/sites/default/files/2021-10/color_etopo1_ice_low.jpg</item>
+        <item tools:ignore="TypographyDashes">@string/about_media_noaa_etopo</item>
         <item>Earth Lights 2012</item>
     </string-array>    <!-- display summary -->
 

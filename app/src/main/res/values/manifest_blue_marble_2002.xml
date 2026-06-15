@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_blue_marble_2002"><![CDATA[
+    <b>The Blue Marble</b>. NASA Goddard Space Flight Center.
+    https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/
+    ]]></string>
+
+    <array name="manifest_blue_marble_2002">
+        <item>@array/blue_marble_2002_eqc</item>
+        <item>@array/blue_marble_2002_eqc_night</item>
+        <item>@array/blue_marble_2002_aeqd_phoenix</item>
+        <item>@array/blue_marble_2002_aeqd_north</item>
+        <item>@array/blue_marble_2002_aeqd_south</item>
+    </array>
+
+    <string-array name="blue_marble_2002_eqc">
+        <item>land_ocean_ice_2048.jpg</item>           <!-- file -->
+        <item>day</item>                               <!-- type -->
+        <item>Blue Marble (2002)</item>                <!-- title -->
+        <item>@string/about_blue_marble_2002</item>    <!-- summary -->
+        <item>eqc</item>                               <!-- projection -->
+        <item>@null</item>                             <!-- projection center -->
+        <item>false</item>                             <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2002_eqc_night">
+        <item>land_ocean_ice_lights_2048.jpg</item>    <!-- file -->
+        <item>night</item>                             <!-- type -->
+        <item>Blue Marble (2002) [Night]</item>        <!-- title -->
+        <item>@string/about_blue_marble_2002</item>    <!-- summary -->
+        <item>eqc</item>                               <!-- projection -->
+        <item>@null</item>                             <!-- projection center -->
+        <item>false</item>                             <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2002_aeqd_north">
+        <item>land_shallow_topo_aeqd_90,0.png</item>       <!-- file -->
+        <item>day</item>                                   <!-- type -->
+        <item>North: Blue Marble (2002)</item>             <!-- title -->
+        <item>@string/about_blue_marble_2002</item>        <!-- summary -->
+        <item>aeqd_90,0</item>                             <!-- projection -->
+        <item>90,0</item>                                  <!-- projection center -->
+        <item>false</item>                                 <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2002_aeqd_south">
+        <item>land_shallow_topo_aeqd_-90,0.png</item>       <!-- file -->
+        <item>day</item>                                    <!-- type -->
+        <item>South: Blue Marble (2002)</item>              <!-- title -->
+        <item>@string/about_blue_marble_2002</item>         <!-- summary -->
+        <item>aeqd_-90,0</item>                             <!-- projection -->
+        <item>-90,0</item>                                  <!-- projection center -->
+        <item>false</item>                                  <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2002_aeqd_phoenix">
+        <item>land_shallow_topo_aeqd_33,-111.png</item>     <!-- file -->
+        <item>day</item>                                    <!-- type -->
+        <item>Phoenix: Blue Marble (2002)</item>            <!-- title -->
+        <item>@string/about_blue_marble_2002</item>         <!-- summary -->
+        <item>aeqd_33,-111</item>                           <!-- projection -->
+        <item>33,-111</item>                                <!-- projection center -->
+        <item>false</item>                                  <!-- tint -->
+    </string-array>
+
+</resources>

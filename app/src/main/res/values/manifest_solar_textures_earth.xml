@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_solar_textures_earth"><![CDATA[ <b>Solar Textures.</b> Attribution 4.0 International license. https://www.solarsystemscope.com/textures/. ]]></string>
+    <string name="about_solar_textures_earth"><![CDATA[ <b>Solar Textures.</b> Attribution 4.0 International license.
+    https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg ]]></string>
 
     <array name="manifest_solar_textures_earth">
         <item>@array/solar_textures_earth_eqc</item>
@@ -12,60 +13,60 @@
     </array>
 
     <string-array name="solar_textures_earth_eqc">
-        <item>solar_textures_earth_eqc_2048.jpg</item>    <!-- day file -->
-        <item>day</item>
-        <item>Solar Textures</item>                  <!-- title -->
-        <item>https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg</item>  <!-- summary -->
-        <item>eqc</item>                             <!-- projection -->
-        <item>@null</item>                           <!-- projection center -->
-        <item>false</item>                           <!-- tint -->
+        <item>solar_textures_earth_eqc_2048.jpg</item>    <!-- file -->
+        <item>day</item>                                  <!-- type -->
+        <item>Solar Textures</item>                       <!-- title -->
+        <item>@string/about_solar_textures_earth</item>   <!-- summary -->
+        <item>eqc</item>                                  <!-- projection -->
+        <item>@null</item>                                <!-- projection center -->
+        <item>false</item>                                <!-- tint -->
     </string-array>
 
     <string-array name="solar_textures_earth_aeqd_north">
-        <item>solar_textures_earth_aeqd_90,0.png</item>    <!-- day file -->
-        <item>day</item>
-        <item>North: Solar Textures</item>                        <!-- title -->
-        <item>https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg</item>  <!-- summary -->
-        <item>aeqd_90,0</item>                             <!-- projection -->
-        <item>90,0</item>                                  <!-- projection center -->
-        <item>false</item>                                 <!-- tint -->
+        <item>solar_textures_earth_aeqd_90,0.png</item>   <!-- file -->
+        <item>day</item>                                  <!-- type -->
+        <item>North: Solar Textures</item>                <!-- title -->
+        <item>@string/about_solar_textures_earth</item>   <!-- summary -->
+        <item>aeqd_90,0</item>                            <!-- projection -->
+        <item>90,0</item>                                 <!-- projection center -->
+        <item>false</item>                                <!-- tint -->
     </string-array>
 
     <string-array name="solar_textures_earth_aeqd_south">
-        <item>solar_textures_earth_aeqd_-90,0.png</item>    <!-- day file -->
-        <item>day</item>
-        <item>South: Solar Textures</item>                        <!-- title -->
-        <item>https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg</item>  <!-- summary -->
-        <item>aeqd_-90,0</item>                             <!-- projection -->
-        <item>-90,0</item>                                  <!-- projection center -->
-        <item>false</item>                                  <!-- tint -->
+        <item>solar_textures_earth_aeqd_-90,0.png</item>  <!-- file -->
+        <item>day</item>                                  <!-- type -->
+        <item>South: Solar Textures</item>                <!-- title -->
+        <item>@string/about_solar_textures_earth</item>   <!-- summary -->
+        <item>aeqd_-90,0</item>                           <!-- projection -->
+        <item>-90,0</item>                                <!-- projection center -->
+        <item>false</item>                                <!-- tint -->
     </string-array>
 
     <string-array name="solar_textures_earth_merc">
-        <item>solar_textures_earth_merc.png</item>   <!-- day file -->
-        <item>day</item>
+        <item>solar_textures_earth_merc.png</item>   <!-- file -->
+        <item>day</item>                             <!-- type -->
         <item>Solar Textures</item>                  <!-- title -->
-        <item>https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg</item>  <!-- summary -->
+        <item>@string/about_solar_textures_earth</item>  <!-- summary -->
         <item>merc</item>                            <!-- projection -->
         <item>@null</item>                           <!-- projection center -->
         <item>false</item>                           <!-- tint -->
     </string-array>
 
     <string-array name="solar_textures_earth_sinu">
-        <item>solar_textures_earth_sinu.png</item>   <!-- day file -->
-        <item>day</item>
+        <item>solar_textures_earth_sinu.png</item>   <!-- file -->
+        <item>day</item>                             <!-- type -->
         <item>Solar Textures</item>                  <!-- title -->
-        <item>https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg</item>  <!-- summary -->
+        <item>@string/about_solar_textures_earth</item>  <!-- summary -->
         <item>sinu</item>                            <!-- projection -->
         <item>@null</item>                           <!-- projection center -->
         <item>false</item>                           <!-- tint -->
     </string-array>
 
     <string-array name="solar_textures_earth_vandg">
-        <item>solar_textures_earth_vandg.png</item>  <!-- day file -->
-        <item>day</item>
+        <item>solar_textures_earth_vandg.png</item>  <!-- file -->
+        <item>day</item>                             <!-- type -->
         <item>Solar Textures</item>                  <!-- title -->
-        <item>https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg</item>  <!-- summary -->
+        <item>@string/about_solar_textures_earth</item>  <!-- summary -->
         <item>vandg</item>                           <!-- projection -->
         <item>@null</item>                           <!-- projection center -->
         <item>false</item>                           <!-- tint -->
