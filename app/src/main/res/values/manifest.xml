@@ -43,15 +43,11 @@
         or as a MapDefinition class registered in `suntimes.mappack.maps.MapManifest`
     -->
     <string-array name="background_id">
-        <item>eo_base_2020_eqc</item>
-        <item>worldmap-a_non-frame_2014_eqc</item>
         <item>color_etopo1_ice_low_eqc</item>
         <item>earth_lights_lrg_1024</item>
     </string-array>    <!-- a unique string id -->
 
     <string-array name="background_day_file">
-        <item>eo_base_2020_eqc_1024.png</item>
-        <item>worldmap-a_non-frame_2014_eqc_1024.png</item>
         <item>color_etopo1_ice_low_eqc_1024.jpg</item>
         <item>earth_lights_lrg_1024.jpg</item>
     </string-array>    <!-- filename / asset -->
@@ -59,41 +55,29 @@
     <string-array name="background_projection">
         <item>eqc</item>
         <item>eqc</item>
-        <item>eqc</item>
-        <item>eqc</item>
     </string-array>    <!-- simple projection string -->
 
     <string-array name="background_type">
-        <item>day</item>
-        <item>day</item>
         <item>day</item>
         <item>night</item>
     </string-array>    <!-- simple projection string -->
 
     <string-array name="background_title">
-        <item>EO Base (2020)</item>
-        <item>WorldMap A (Wikipedia)</item>
         <item>ETOPO Global Relief (2022)</item>
-        <item>Earth Lights 2012</item>
+        <item>Earth Lights (2012)</item>
     </string-array>    <!-- display title -->
 
     <string-array name="background_summary">
-        <item>EO Base (2020)</item>
-        <item>https://upload.wikimedia.org/wikipedia/commons/c/cf/WorldMap-A_non-Frame.png</item>
         <item tools:ignore="TypographyDashes">@string/about_media_noaa_etopo</item>
-        <item>Earth Lights 2012</item>
+        <item>Earth Lights (2012)</item>
     </string-array>    <!-- display summary -->
 
     <string-array name="background_tint">
         <item>false</item>
         <item>false</item>
-        <item>false</item>
-        <item>false</item>
     </string-array>    <!-- true / false -->
 
     <string-array name="background_center">
-        <item>@null</item>
-        <item>@null</item>
         <item>@null</item>
         <item>@null</item>
     </string-array>    <!-- e.g. "@null", "90,0", etc -->
