@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_blue_marble_2004_bathy"><![CDATA[ <b>Blue Marble: Next Generation</b>. NASA Earth Observatory. ]]></string>
     <string name="title_blue_marble_2004_bathy">Blue Marble [Bathymetry]</string>
+    <string name="about_blue_marble_2004_bathy"><![CDATA[ <b>Blue Marble: Next Generation</b>. NASA Earth Observatory. ]]></string>
 
     <array name="manifest_blue_marble_2004_bathy">
         <item>@array/blue_marble_2004_bathy_eqc</item>

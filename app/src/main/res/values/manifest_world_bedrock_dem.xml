@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="title_world_bedrock_dem">World Bedrock DEM</string>
     <string name="about_world_bedrock_dem"><![CDATA[
     <b>World Bedrock Digital Elevation Model.</b> Kevin M. Gill, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=95394543.
     https://commons.wikimedia.org/wiki/Maps_of_the_world#/media/File:World_Bedrock_Digital_Elevation_Model.png
@@ -17,7 +18,7 @@
     <string-array name="world_bedrock_dem_eqc">
         <item>world_bedrock_dem_eqc.png</item>       <!-- file -->
         <item>day</item>                             <!-- type -->
-        <item>World Bedrock DEM</item>               <!-- title -->
+        <item>@string/title_world_bedrock_dem</item> <!-- title -->
         <item>@string/about_world_bedrock_dem</item> <!-- summary -->
         <item>eqc</item>                             <!-- projection -->
         <item>@null</item>                           <!-- projection center -->
@@ -47,7 +48,7 @@
     <string-array name="world_bedrock_dem_merc">
         <item>world_bedrock_dem_merc.png</item>      <!-- file -->
         <item>day</item>                             <!-- type -->
-        <item>World Bedrock DEM</item>               <!-- title -->
+        <item>@string/title_world_bedrock_dem</item> <!-- title -->
         <item>@string/about_world_bedrock_dem</item> <!-- summary -->
         <item>merc</item>                            <!-- projection -->
         <item>@null</item>                           <!-- projection center -->
@@ -57,7 +58,7 @@
     <string-array name="world_bedrock_dem_sinu">
         <item>world_bedrock_dem_sinu.png</item>      <!-- file -->
         <item>day</item>                             <!-- type -->
-        <item>World Bedrock DEM</item>               <!-- title -->
+        <item>@string/title_world_bedrock_dem</item> <!-- title -->
         <item>@string/about_world_bedrock_dem</item> <!-- summary -->
         <item>sinu</item>                            <!-- projection -->
         <item>@null</item>                           <!-- projection center -->
@@ -67,7 +68,7 @@
     <string-array name="world_bedrock_dem_vandg">
         <item>world_bedrock_dem_vandg.png</item>     <!-- file -->
         <item>day</item>                             <!-- type -->
-        <item>World Bedrock DEM</item>               <!-- title -->
+        <item>@string/title_world_bedrock_dem</item> <!-- title -->
         <item>@string/about_world_bedrock_dem</item> <!-- summary -->
         <item>vandg</item>                           <!-- projection -->
         <item>@null</item>                           <!-- projection center -->

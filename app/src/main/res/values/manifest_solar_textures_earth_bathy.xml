@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="title_solar_textures_earth_bathy">Solar Textures [Bathymetry]</string>
     <string name="about_solar_textures_earth_bathy"><![CDATA[
     <b>Solar Textures.</b> Attribution 4.0 International license.
     https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg
@@ -17,7 +18,7 @@
     <string-array name="solar_textures_earth_bathy_eqc">
         <item>solar_textures_earth_bathy_eqc_2048.png</item>   <!-- file -->
         <item>day</item>                                       <!-- type -->
-        <item>Solar Textures + Bathymetry</item>               <!-- title -->
+        <item>@string/title_solar_textures_earth_bathy</item>  <!-- title -->
         <item>@string/about_solar_textures_earth_bathy</item>  <!-- summary -->
         <item>eqc</item>                                       <!-- projection -->
         <item>@null</item>                                     <!-- projection center -->
@@ -27,7 +28,7 @@
     <string-array name="solar_textures_earth_bathy_aeqd_north">
         <item>solar_textures_earth_bathy_aeqd_90,0.png</item>    <!-- file -->
         <item>day</item>                                         <!-- type -->
-        <item>North: Solar Textures + Bathymetry</item>          <!-- title -->
+        <item>North: Solar Textures [Bathymetry]</item>          <!-- title -->
         <item>@string/about_solar_textures_earth_bathy</item>    <!-- summary -->
         <item>aeqd_90,0</item>                                   <!-- projection -->
         <item>90,0</item>                                        <!-- projection center -->
@@ -37,7 +38,7 @@
     <string-array name="solar_textures_earth_bathy_aeqd_south">
         <item>solar_textures_earth_bathy_aeqd_-90,0.png</item>    <!-- file -->
         <item>day</item>                                          <!-- type -->
-        <item>South: Solar Textures + Bathymetry</item>           <!-- title -->
+        <item>South: Solar Textures [Bathymetry]</item>           <!-- title -->
         <item>@string/about_solar_textures_earth_bathy</item>     <!-- summary -->
         <item>aeqd_-90,0</item>                                   <!-- projection -->
         <item>-90,0</item>                                        <!-- projection center -->
@@ -47,7 +48,7 @@
     <string-array name="solar_textures_earth_bathy_merc">
         <item>solar_textures_earth_bathy_merc.png</item>          <!-- file -->
         <item>day</item>                                          <!-- type -->
-        <item>Solar Textures + Bathymetry</item>                  <!-- title -->
+        <item>@string/title_solar_textures_earth_bathy</item>  <!-- title -->
         <item>@string/about_solar_textures_earth_bathy</item>     <!-- summary -->
         <item>merc</item>                                         <!-- projection -->
         <item>@null</item>                                        <!-- projection center -->
@@ -57,7 +58,7 @@
     <string-array name="solar_textures_earth_bathy_sinu">
         <item>solar_textures_earth_bathy_sinu.png</item>          <!-- file -->
         <item>day</item>                                          <!-- type -->
-        <item>Solar Textures + Bathymetry</item>                  <!-- title -->
+        <item>@string/title_solar_textures_earth_bathy</item>  <!-- title -->
         <item>@string/about_solar_textures_earth_bathy</item>     <!-- summary -->
         <item>sinu</item>                                         <!-- projection -->
         <item>@null</item>                                        <!-- projection center -->
@@ -67,7 +68,7 @@
     <string-array name="solar_textures_earth_bathy_vandg">
         <item>solar_textures_earth_bathy_vandg.png</item>         <!-- file -->
         <item>day</item>                                          <!-- type -->
-        <item>Solar Textures + Bathymetry</item>                  <!-- title -->
+        <item>@string/title_solar_textures_earth_bathy</item>  <!-- title -->
         <item>@string/about_solar_textures_earth_bathy</item>     <!-- summary -->
         <item>vandg</item>                                        <!-- projection -->
         <item>@null</item>                                        <!-- projection center -->
