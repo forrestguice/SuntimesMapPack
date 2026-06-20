@@ -1,126 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_blue_marble_2002">Blue Marble (2002)</string>
-    <string name="about_blue_marble_2002"><![CDATA[
+    <string name="title_blue_marble_2002_ice">Blue Marble (2002) [Sea Ice]</string>
+    <string name="about_blue_marble_2002_ice"><![CDATA[
     <b>The Blue Marble</b>. NASA Goddard Space Flight Center.
     https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/
     ]]></string>
 
-    <array name="manifest_blue_marble_2002">
-        <item>@array/blue_marble_2002_aeqd_phoenix</item>
-        <item>@array/blue_marble_2002_aeqd_north</item>
-        <item>@array/blue_marble_2002_aeqd_south</item>
-        <item>@array/blue_marble_2002_eqc</item>
-        <item>@array/blue_marble_2002_merc</item>
-        <item>@array/blue_marble_2002_sinu</item>
-        <item>@array/blue_marble_2002_vandg</item>
-        <item>@array/blue_marble_2002_eqc_night</item>
-        <item>@array/blue_marble_2002_merc_night</item>
-        <item>@array/blue_marble_2002_sinu_night</item>
-        <item>@array/blue_marble_2002_vandg_night</item>
+    <array name="manifest_blue_marble_2002_ice">
+        <item>@array/blue_marble_2002_ice_aeqd_phoenix</item>
+        <item>@array/blue_marble_2002_ice_aeqd_north</item>
+        <item>@array/blue_marble_2002_ice_aeqd_south</item>
+        <item>@array/blue_marble_2002_ice_eqc</item>
+        <item>@array/blue_marble_2002_ice_merc</item>
+        <item>@array/blue_marble_2002_ice_sinu</item>
+        <item>@array/blue_marble_2002_ice_vandg</item>
+        <item>@array/blue_marble_2002_ice_eqc_night</item>
+        <item>@array/blue_marble_2002_ice_merc_night</item>
+        <item>@array/blue_marble_2002_ice_sinu_night</item>
+        <item>@array/blue_marble_2002_ice_vandg_night</item>
     </array>
 
-    <string-array name="blue_marble_2002_eqc">
+    <string-array name="blue_marble_2002_ice_eqc">
         <item>land_ocean_ice_2048.jpg</item>           <!-- file -->
         <item>day</item>                               <!-- type -->
-        <item>@string/title_blue_marble_2002</item>    <!-- title -->
-        <item>@string/about_blue_marble_2002</item>    <!-- summary -->
+        <item>@string/title_blue_marble_2002_ice</item>    <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>    <!-- summary -->
         <item>eqc</item>                               <!-- projection -->
         <item>@null</item>                             <!-- projection center -->
         <item>false</item>                             <!-- tint -->
     </string-array>
-    <string-array name="blue_marble_2002_eqc_night">
+    <string-array name="blue_marble_2002_ice_eqc_night">
         <item>land_ocean_ice_lights_2048.jpg</item>    <!-- file -->
         <item>night</item>                             <!-- type -->
-        <item>@string/title_blue_marble_2002</item>    <!-- title -->
-        <item>@string/about_blue_marble_2002</item>    <!-- summary -->
+        <item>@string/title_blue_marble_2002_ice</item>    <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>    <!-- summary -->
         <item>eqc</item>                               <!-- projection -->
         <item>@null</item>                             <!-- projection center -->
         <item>false</item>                             <!-- tint -->
     </string-array>
 
-    <string-array name="blue_marble_2002_aeqd_north">
+    <string-array name="blue_marble_2002_ice_aeqd_north">
         <item>land_shallow_topo_aeqd_90,0.png</item>       <!-- file -->
         <item>day</item>                                   <!-- type -->
-        <item>North: Blue Marble (2002)</item>             <!-- title -->
-        <item>@string/about_blue_marble_2002</item>        <!-- summary -->
+        <item>North: Blue Marble (2002) [Sea Ice]</item>             <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>        <!-- summary -->
         <item>aeqd_90,0</item>                             <!-- projection -->
         <item>90,0</item>                                  <!-- projection center -->
         <item>false</item>                                 <!-- tint -->
     </string-array>
 
-    <string-array name="blue_marble_2002_aeqd_south">
+    <string-array name="blue_marble_2002_ice_aeqd_south">
         <item>land_shallow_topo_aeqd_-90,0.png</item>       <!-- file -->
         <item>day</item>                                    <!-- type -->
-        <item>South: Blue Marble (2002)</item>              <!-- title -->
-        <item>@string/about_blue_marble_2002</item>         <!-- summary -->
+        <item>South: Blue Marble (2002) [Sea Ice]</item>              <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>         <!-- summary -->
         <item>aeqd_-90,0</item>                             <!-- projection -->
         <item>-90,0</item>                                  <!-- projection center -->
         <item>false</item>                                  <!-- tint -->
     </string-array>
 
-    <string-array name="blue_marble_2002_aeqd_phoenix">
+    <string-array name="blue_marble_2002_ice_aeqd_phoenix">
         <item>land_shallow_topo_aeqd_33,-111.png</item>     <!-- file -->
         <item>day</item>                                    <!-- type -->
-        <item>Phoenix: Blue Marble (2002)</item>            <!-- title -->
-        <item>@string/about_blue_marble_2002</item>         <!-- summary -->
+        <item>Phoenix: Blue Marble (2002) [Sea Ice]</item>            <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>         <!-- summary -->
         <item>aeqd_33,-111</item>                           <!-- projection -->
         <item>33,-111</item>                                <!-- projection center -->
         <item>false</item>                                  <!-- tint -->
     </string-array>
 
-    <string-array name="blue_marble_2002_merc">
+    <string-array name="blue_marble_2002_ice_merc">
         <item>land_ocean_ice_merc.png</item>                <!-- file -->
         <item>day</item>                                    <!-- type -->
-        <item>@string/title_blue_marble_2002</item>         <!-- title -->
-        <item>@string/about_blue_marble_2002</item>         <!-- summary -->
+        <item>@string/title_blue_marble_2002_ice</item>         <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>         <!-- summary -->
         <item>merc</item>                                   <!-- projection -->
         <item>@null</item>                                  <!-- projection center -->
         <item>false</item>                                  <!-- tint -->
     </string-array>
-    <string-array name="blue_marble_2002_merc_night">
+    <string-array name="blue_marble_2002_ice_merc_night">
         <item>land_ocean_ice_lights_merc.png</item>         <!-- file -->
         <item>night</item>                                  <!-- type -->
-        <item>@string/title_blue_marble_2002</item>         <!-- title -->
-        <item>@string/about_blue_marble_2002</item>         <!-- summary -->
+        <item>@string/title_blue_marble_2002_ice</item>         <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>         <!-- summary -->
         <item>merc</item>                                   <!-- projection -->
         <item>@null</item>                                  <!-- projection center -->
         <item>false</item>                                  <!-- tint -->
     </string-array>
 
-    <string-array name="blue_marble_2002_sinu">
+    <string-array name="blue_marble_2002_ice_sinu">
         <item>land_ocean_ice_sinu.png</item>                <!-- file -->
         <item>day</item>                                    <!-- type -->
-        <item>@string/title_blue_marble_2002</item>         <!-- title -->
-        <item>@string/about_blue_marble_2002</item>         <!-- summary -->
+        <item>@string/title_blue_marble_2002_ice</item>         <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>         <!-- summary -->
         <item>sinu</item>                                   <!-- projection -->
         <item>@null</item>                                  <!-- projection center -->
         <item>false</item>                                  <!-- tint -->
     </string-array>
-    <string-array name="blue_marble_2002_sinu_night">
+    <string-array name="blue_marble_2002_ice_sinu_night">
         <item>land_ocean_ice_lights_sinu.png</item>         <!-- file -->
         <item>night</item>                                  <!-- type -->
-        <item>@string/title_blue_marble_2002</item>         <!-- title -->
-        <item>@string/about_blue_marble_2002</item>         <!-- summary -->
+        <item>@string/title_blue_marble_2002_ice</item>         <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>         <!-- summary -->
         <item>sinu</item>                                   <!-- projection -->
         <item>@null</item>                                  <!-- projection center -->
         <item>false</item>                                  <!-- tint -->
     </string-array>
 
-    <string-array name="blue_marble_2002_vandg">
+    <string-array name="blue_marble_2002_ice_vandg">
         <item>land_ocean_ice_vandg.png</item>               <!-- file -->
         <item>day</item>                                    <!-- type -->
-        <item>@string/title_blue_marble_2002</item>         <!-- title -->
-        <item>@string/about_blue_marble_2002</item>         <!-- summary -->
+        <item>@string/title_blue_marble_2002_ice</item>         <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>         <!-- summary -->
         <item>vandg</item>                                  <!-- projection -->
         <item>@null</item>                                  <!-- projection center -->
         <item>false</item>                                  <!-- tint -->
     </string-array>
-    <string-array name="blue_marble_2002_vandg_night">
+    <string-array name="blue_marble_2002_ice_vandg_night">
         <item>land_ocean_ice_lights_vandg.png</item>        <!-- file -->
         <item>night</item>                                  <!-- type -->
-        <item>@string/title_blue_marble_2002</item>         <!-- title -->
-        <item>@string/about_blue_marble_2002</item>         <!-- summary -->
+        <item>@string/title_blue_marble_2002_ice</item>         <!-- title -->
+        <item>@string/about_blue_marble_2002_ice</item>         <!-- summary -->
         <item>vandg</item>                                  <!-- projection -->
         <item>@null</item>                                  <!-- projection center -->
         <item>false</item>                                  <!-- tint -->
