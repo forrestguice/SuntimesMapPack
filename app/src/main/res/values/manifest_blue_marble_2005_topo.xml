@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_blue_marble_2005_topo">Blue Marble (2005)</string>
+    <string name="about_blue_marble_2005_topo"><![CDATA[ <b>Blue Marble: Next Generation</b>. NASA Earth Observatory. ]]></string>
+
+    <array name="manifest_blue_marble_2005">
+        <item>@array/blue_marble_2005_topo_eqc</item>
+        <item>@array/blue_marble_2005_topo_aeqd_cairo</item>
+        <item>@array/blue_marble_2005_topo_aeqd_phoenix</item>
+        <item>@array/blue_marble_2005_topo_aeqd_north</item>
+        <item>@array/blue_marble_2005_topo_aeqd_south</item>
+        <item>@array/blue_marble_2005_topo_merc</item>
+        <item>@array/blue_marble_2005_topo_sinu</item>
+        <item>@array/blue_marble_2005_topo_vandg</item>
+    </array>
+
+    <string-array name="blue_marble_2005_topo_eqc">
+        <item>world_topo_eqc.png</item>                    <!-- file -->
+        <item>day</item>                                   <!-- type -->
+        <item>@string/title_blue_marble_2005_bathy</item>  <!-- title -->
+        <item>@string/about_blue_marble_2005_bathy</item>  <!-- summary -->
+        <item>eqc</item>                                   <!-- projection -->
+        <item>@null</item>                                 <!-- projection center -->
+        <item>false</item>                                 <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2005_topo_aeqd_north">
+        <item>world_topo_aeqd_90,0.png</item>              <!--file -->
+        <item>day</item>                                   <!-- type -->
+        <item>North: Blue Marble (2005)</item>             <!-- title -->
+        <item>@string/about_blue_marble_2005_bathy</item>  <!-- summary -->
+        <item>aeqd_90,0</item>                             <!-- projection -->
+        <item>90,0</item>                                  <!-- projection center -->
+        <item>false</item>                                 <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2005_topo_aeqd_south">
+        <item>world_topo_aeqd_-90,0.png</item>              <!-- file -->
+        <item>day</item>                                    <!-- type -->
+        <item>South: Blue Marble (2005)</item>              <!-- title -->
+        <item>@string/about_blue_marble_2005_bathy</item>   <!-- summary -->
+        <item>aeqd_-90,0</item>                             <!-- projection -->
+        <item>-90,0</item>                                  <!-- projection center -->
+        <item>false</item>                                  <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2005_topo_aeqd_cairo">
+        <item>world_topo_aeqd_cairo_30,31.png</item>        <!-- file -->
+        <item>day</item>                                    <!-- type -->
+        <item>Cairo: Blue Marble (2005)</item>              <!-- title -->
+        <item>@string/about_blue_marble_2005_bathy</item>   <!-- summary -->
+        <item>aeqd_30,31</item>                             <!-- projection -->
+        <item>30,31</item>                                  <!-- projection center -->
+        <item>false</item>                                  <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2005_topo_aeqd_phoenix">
+        <item>world_topo_aeqd_33,-111.png</item>            <!-- file -->
+        <item>day</item>                                    <!-- type -->
+        <item>Phoenix: Blue Marble (2005)</item>            <!-- title -->
+        <item>@string/about_blue_marble_2005_bathy</item>   <!-- summary -->
+        <item>aeqd_33,-111</item>                           <!-- projection -->
+        <item>33,-111</item>                                <!-- projection center -->
+        <item>false</item>                                  <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2005_topo_merc">
+        <item>world_topo_merc.png</item>                    <!-- file -->
+        <item>day</item>                                    <!-- type -->
+        <item>@string/title_blue_marble_2005_bathy</item>   <!-- title -->
+        <item>@string/about_blue_marble_2005_bathy</item>   <!-- summary -->
+        <item>merc</item>                                   <!-- projection -->
+        <item>@null</item>                                  <!-- projection center -->
+        <item>false</item>                                  <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2005_topo_sinu">
+        <item>world_topo_sinu.png</item>                    <!-- file -->
+        <item>day</item>                                    <!-- type -->
+        <item>@string/title_blue_marble_2005_bathy</item>   <!-- title -->
+        <item>@string/about_blue_marble_2005_bathy</item>   <!-- summary -->
+        <item>sinu</item>                                   <!-- projection -->
+        <item>@null</item>                                  <!-- projection center -->
+        <item>false</item>                                  <!-- tint -->
+    </string-array>
+
+    <string-array name="blue_marble_2005_topo_vandg">
+        <item>world_topo_vandg.png</item>                   <!-- file -->
+        <item>day</item>                                    <!-- type -->
+        <item>@string/title_blue_marble_2005_bathy</item>   <!-- title -->
+        <item>@string/about_blue_marble_2005_bathy</item>   <!-- summary -->
+        <item>vandg</item>                                  <!-- projection -->
+        <item>@null</item>                                  <!-- projection center -->
+        <item>false</item>                                  <!-- tint -->
+    </string-array>
+
+</resources>
