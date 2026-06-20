@@ -36,6 +36,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -84,6 +85,7 @@ public class SuntimesMapAssets
                     {
                         try {
                             InputStream input = assets.open(srcPath);
+                            //noinspection IOStreamConstructor
                             OutputStream output = new FileOutputStream(dstPath);
                             try {
                                 copyStream(input, output);
@@ -189,6 +191,7 @@ public class SuntimesMapAssets
     protected static void initBackgroundItems_manifests(Context context, Map<String,WorldMapBackgroundItem> map)
     {
         Resources res = context.getResources();
+        //noinspection resource
         TypedArray manifests = res.obtainTypedArray(R.array.map_manifests);
         Log.i("MapProvider", "found " + manifests.length() + " map manifests.");
 
@@ -198,6 +201,7 @@ public class SuntimesMapAssets
             if (manifestId != 0)
             {
                 String manifestName = res.getResourceEntryName(manifestId);
+                //noinspection resource
                 TypedArray manifest = res.obtainTypedArray(manifestId);
                 Log.i("MapProvider", "found " + manifest.length() + " items in " + manifestName);
                 for (int j=0; j<manifest.length(); j++)
@@ -293,7 +297,7 @@ public class SuntimesMapAssets
             this.displayString = displayString;
         }
 
-        private String projection;
+        private final String projection;
         public String getProjection() {
             return projection;
         }

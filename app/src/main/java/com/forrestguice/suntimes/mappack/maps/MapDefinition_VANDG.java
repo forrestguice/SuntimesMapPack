@@ -18,7 +18,6 @@
 
 package com.forrestguice.suntimes.mappack.maps;
 
-import com.forrestguice.suntimes.mappack.SuntimesMapAssets;
 import com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract;
 
 public abstract class MapDefinition_VANDG extends MapDefinition
