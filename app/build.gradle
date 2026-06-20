@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'com.forrestguice.suntimes.mappack'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.forrestguice.suntimes.mappack"
         minSdk 16
-        targetSdk 34
+        targetSdk 36
 
         versionCode 1
         versionName "0.1.0"
