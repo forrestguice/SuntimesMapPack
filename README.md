@@ -14,26 +14,11 @@ This is an addon for Suntimes that adds Blue Marble map imagery to the World Map
 
 Map backgrounds can also be [downloaded](https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/downloadbackgrounds/index.html) and loaded in Suntimes using the `Set Map Background` option. This addon offers a more convenient way to download and use these files.
 
-<img alt="Equirectangular" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_land_shallow_topo_eqc_1024.jpg' width="280px" />
-<img alt="Polar [south]" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_land_shallow_topo_aeqd_-90,0.png' width="280px" />
-<img alt="Polar [north]" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_land_shallow_topo_aeqd_90,0.png' width="280px" />
-
-<img alt="Equirectangular" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_eo_base_2020_eqc_1024.png' width="280px" />
-
-<img alt="Equirectangular" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_eqc_1024.jpg' width="280px" />
-<img alt="Mercator" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_merc.png' width="280px" />
 <img alt="Van der Grinten" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_vandg.png' width="280px" />
-<img alt="Polar [north]" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_aeqd_90,0.png' width="280px" />
-<img alt="Polar [south]" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_aeqd_-90,0.png' width="280px" />
-<img alt="Azimuthal Equidistant (Phoenix)" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_aeqd_33,-111.png' width="280px" />
-<img alt="Azimuthal Equidistant (Cairo)" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_aeqd_Cairo_30,31.png' width="280px" />
-
 
 ## Nightly Version ##
 
-A "nightly" version is available at https://forrestguice.github.io/SuntimesMappack-nightly/fdroid/repo/.
-
-* to install the nightly version, [add the repository](https://f-droid.org/en/tutorials/add-repo/) to your F-Droid client.
+A "nightly" version is available at https://forrestguice.github.io/SuntimesMapPack-nightly/fdroid/repo/. To install the nightly version, [add the repository](https://f-droid.org/en/tutorials/add-repo/) to your F-Droid client.
 * "nightly" versions can be installed alongside the [official release](https://github.com/forrestguice/SuntimesMapPack/releases).
 * "nightly" versions of add-ons depend on the "nightly" version of Suntimes.
 * "nightly" versions are debug builds; **they are not meant for everyday use** but may be useful for testing or debugging.
