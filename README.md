@@ -5,6 +5,7 @@ It depends on [Suntimes v0.17.3](https://github.com/forrestguice/SuntimesWidget/
 [![GitHub release](https://img.shields.io/github/release/forrestguice/SuntimesMapPack.svg)](https://github.com/forrestguice/SuntimesMapPack/releases)
 [![Android CI](https://github.com/forrestguice/SuntimesMapPack/actions/workflows/android.yml/badge.svg)](https://github.com/forrestguice/SuntimesMapPack/actions/workflows/android.yml)
 
+* [Nightly Version](#nightly-version)
 * [Donations](#donations)
 * [Bug Reports](#bug-reports)
 * [Legal Stuff](#legal-stuff)
@@ -26,6 +27,17 @@ Map backgrounds can also be [downloaded](https://forrestguice.github.io/Suntimes
 <img alt="Polar [south]" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_aeqd_-90,0.png' width="280px" />
 <img alt="Azimuthal Equidistant (Phoenix)" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_aeqd_33,-111.png' width="280px" />
 <img alt="Azimuthal Equidistant (Cairo)" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_aeqd_Cairo_30,31.png' width="280px" />
+
+
+## Nightly Version ##
+
+A "nightly" version is available at https://forrestguice.github.io/SuntimesMapBack-nightly/fdroid/repo/.
+
+**Note:**
+* to install the nightly version, [add the repository](https://f-droid.org/en/tutorials/add-repo/) to your F-Droid client.
+* "nightly" versions can be installed alongside the [official release](https://github.com/forrestguice/SuntimesMapPack/releases).
+* "nightly" versions of add-ons depend on the "nightly" version of Suntimes.
+* "nightly" versions are debug builds; **they are not meant for everyday use** but may be useful for testing or debugging.
 
 
 ## Donations ##

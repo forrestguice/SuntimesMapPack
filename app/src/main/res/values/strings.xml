@@ -1,7 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Suntimes Map Pack</string>
     <string name="app_desc">A collection of world map backgrounds for Suntimes.</string>
-
     <string name="about_app_version_field"><![CDATA[<b>Version:</b>]]> %1$s</string>
     <string name="about_app_support_field"><![CDATA[
         <b>Support:</b> visit the

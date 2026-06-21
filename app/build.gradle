@@ -17,8 +17,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         resConfigs "en"
 
-        def suntimesPermissionRoot = "suntimes.nightly"
-        def suntimesApplicationId = "com.forrestguice.suntimeswidget.nightly"
+        def suntimesPermissionRoot = "suntimes"
+        def suntimesApplicationId = "com.forrestguice.suntimeswidget"
         def mappackAuthorityRoot = "suntimes.mappack"
 
         buildConfigField "String", "GIT_HASH", "\"${getGitHash()}\""
@@ -27,6 +27,31 @@ android {
         manifestPlaceholders.mappackAuthorityRoot = "$mappackAuthorityRoot"
         buildConfigField "String", "AUTHORITY_ROOT", "\"$mappackAuthorityRoot\""
         buildConfigField "String", "SUNTIMES_APPLICATION_ID", "\"$suntimesApplicationId\""
+    }
+
+    flavorDimensions = [ "versiontype" ]
+    productFlavors {
+        production {
+            dimension "versiontype"
+            getIsDefault().set(true)
+        }
+        nightly {
+            dimension "versiontype"
+            applicationIdSuffix ".nightly"
+            versionNameSuffix "-nightly"
+            def nightlyVersionCode = new Date().format('yyyyMMddHH') as int
+            versionCode nightlyVersionCode
+
+            def suntimesPermissionRoot = "suntimes.nightly";
+            def suntimesApplicationId = "com.forrestguice.suntimeswidget.nightly";
+            def mappackAuthorityRoot = "suntimes.mappack.nightly"
+
+            manifestPlaceholders.suntimesApplicationId = "$suntimesApplicationId"
+            manifestPlaceholders.suntimesPermissionRoot = "$suntimesPermissionRoot"
+            manifestPlaceholders.mappackAuthorityRoot = "$mappackAuthorityRoot"
+            buildConfigField "String", "AUTHORITY_ROOT", "\"$mappackAuthorityRoot\""
+            buildConfigField "String", "SUNTIMES_APPLICATION_ID", "\"$suntimesApplicationId\""
+        }
     }
 
     buildFeatures {
