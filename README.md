@@ -31,9 +31,8 @@ Map backgrounds can also be [downloaded](https://forrestguice.github.io/Suntimes
 
 ## Nightly Version ##
 
-A "nightly" version is available at https://forrestguice.github.io/SuntimesMapBack-nightly/fdroid/repo/.
+A "nightly" version is available at https://forrestguice.github.io/SuntimesMappack-nightly/fdroid/repo/.
 
-**Note:**
 * to install the nightly version, [add the repository](https://f-droid.org/en/tutorials/add-repo/) to your F-Droid client.
 * "nightly" versions can be installed alongside the [official release](https://github.com/forrestguice/SuntimesMapPack/releases).
 * "nightly" versions of add-ons depend on the "nightly" version of Suntimes.
