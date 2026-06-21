@@ -223,7 +223,7 @@ public class SuntimesMapAssets
                                 Log.d("MapProvider", "initialized: " + item.getID());
 
                             } else {
-                                Log.w("MapProvider", "Item assets for " + mapID + " not found! " + item.getUri());
+                                Log.e("MapProvider", "Item assets for " + mapID + " not found! " + item.getUri());
                             }
                         } else {
                             Log.e("MapProvider", "Item is invalid: " + mapID + "; ignoring...");

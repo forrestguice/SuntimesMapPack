@@ -9,9 +9,8 @@
     ]]></string>
 
     <string-array name="about_media">
-        <item>@string/about_blue_marble_2002_ice</item>
+        <item>@string/about_blue_marble_2002_topo</item>
         <item>@string/about_blue_marble_2005_topo</item>
-        <item>@string/about_blue_marble_2005_bathy</item>
         <item>@string/about_dmsp</item>
         <item>@string/about_solar_textures_earth</item>
         <item>@string/about_world_bedrock_dem</item>
@@ -32,7 +31,9 @@
     <!-- Map manifests are registered here -->
     <array name="map_manifests">
         <item>@array/manifest_blue_marble_2002_ice</item>
+        <item>@array/manifest_blue_marble_2002_topo</item>
         <item>@array/manifest_blue_marble_2005_bathy</item>
+        <item>@array/manifest_blue_marble_2005_topo</item>
         <item>@array/manifest_solar_textures_earth</item>
         <item>@array/manifest_solar_textures_earth_bathy</item>
         <item>@array/manifest_world_bedrock_dem</item>
