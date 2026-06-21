@@ -6,6 +6,8 @@
 
     <array name="manifest_solar_textures_earth">
         <item>@array/solar_textures_earth_eqc</item>
+        <item>@array/solar_textures_earth_aeqd_cairo</item>
+        <item>@array/solar_textures_earth_aeqd_phoenix</item>
         <item>@array/solar_textures_earth_aeqd_north</item>
         <item>@array/solar_textures_earth_aeqd_south</item>
         <item>@array/solar_textures_earth_merc</item>
@@ -41,6 +43,26 @@
         <item>aeqd_-90,0</item>                           <!-- projection -->
         <item>-90,0</item>                                <!-- projection center -->
         <item>false</item>                                <!-- tint -->
+    </string-array>
+
+    <string-array name="solar_textures_earth_aeqd_phoenix">
+        <item>solar_textures_earth_aeqd_33,-111.png</item>       <!-- file -->
+        <item>day</item>                                         <!-- type -->
+        <item>Phoenix: Solar Textures</item>                     <!-- title -->
+        <item>@string/about_solar_textures_earth</item>          <!-- summary -->
+        <item>aeqd_33,-111</item>                                <!-- projection -->
+        <item>33,-111</item>                                     <!-- projection center -->
+        <item>false</item>                                       <!-- tint -->
+    </string-array>
+
+    <string-array name="solar_textures_earth_aeqd_cairo">
+        <item>solar_textures_earth_aeqd_cairo_30,31.png</item>   <!-- file -->
+        <item>day</item>                                         <!-- type -->
+        <item>Cairo: Solar Textures</item>                       <!-- title -->
+        <item>@string/about_solar_textures_earth</item>          <!-- summary -->
+        <item>aeqd_30,31</item>                                  <!-- projection -->
+        <item>30,31</item>                                       <!-- projection center -->
+        <item>false</item>                                       <!-- tint -->
     </string-array>
 
     <string-array name="solar_textures_earth_merc">
