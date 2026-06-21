@@ -2,6 +2,8 @@
 A world map background expansion pack for Suntimes. <br/>
 It depends on [Suntimes v0.17.3](https://github.com/forrestguice/SuntimesWidget/) or later.
 
+<img alt="Van der Grinten" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_vandg.png' width="280px" />
+
 [![GitHub release](https://img.shields.io/github/release/forrestguice/SuntimesMapPack.svg)](https://github.com/forrestguice/SuntimesMapPack/releases)
 [![Android CI](https://github.com/forrestguice/SuntimesMapPack/actions/workflows/android.yml/badge.svg)](https://github.com/forrestguice/SuntimesMapPack/actions/workflows/android.yml)
 
@@ -10,11 +12,10 @@ It depends on [Suntimes v0.17.3](https://github.com/forrestguice/SuntimesWidget/
 * [Bug Reports](#bug-reports)
 * [Legal Stuff](#legal-stuff)
 
-This is an addon for Suntimes that adds Blue Marble map imagery to the World Map dialog.
+This is an addon for Suntimes that adds map backgrounds to the World Map dialog.
 
 Map backgrounds can also be [downloaded](https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/downloadbackgrounds/index.html) and loaded in Suntimes using the `Set Map Background` option. This addon offers a more convenient way to download and use these files.
 
-<img alt="Van der Grinten" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_vandg.png' width="280px" />
 
 ## Nightly Version ##
 
@@ -49,6 +50,11 @@ The source code is available under [GPLv3](LICENSE) (https://github.com/forrestg
 
 
 Map imagery from:
-* NASA Earth Observatory. "Blue Marble: Next Generation" [Public Domain] (https://visibleearth.nasa.gov/view_cat.php?categoryID=1484)
-* NOAA National Centers for Environmental Information. 2022: ETOPO 2022 15 Arc-Second Global Relief Model. NOAA National Centers for Environmental Information. DOI: 10.25921/fd45-gt74.
-* World_Bedrock_Digital_Elevation_Model. By Kevin M. Gill - https://www.flickr.com/photos/53460575@N03/5853039006/, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=95394543
+
+* "The Blue Marble". NASA Goddard Space Flight Center. https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/
+* "Earth at Night". NASA Goddard Space Flight Center. https://svs.gsfc.nasa.gov/vis/a030000/a030000/a030003/dmsp_4096.png
+* "Blue Marble: Next Generation". NASA Earth Observatory. https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/
+* "ETOPO 2022 15 Arc-Second Global Relief Model". NOAA National Centers for Environmental Information. DOI: 10.25921/fd45-gt74.
+* "World_Bedrock_Digital_Elevation_Model". By Kevin M. Gill. CC BY 2.0, https://www.flickr.com/photos/53460575@N03/5853039006/, https://commons.wikimedia.org/w/index.php?curid=95394543
+* "Solar Textures". Attribution 4.0 International license. https://www.solarsystemscope.com/textures/
+
