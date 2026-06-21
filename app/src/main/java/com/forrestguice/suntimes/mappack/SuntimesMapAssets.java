@@ -271,7 +271,7 @@ public class SuntimesMapAssets
     }
 
     public static Uri getUriForFile(Context context, File file) {
-        return FileProvider.getUriForFile(context, "suntimes.mappack.fileprovider", file);
+        return FileProvider.getUriForFile(context, BuildConfig.AUTHORITY_ROOT + ".fileprovider", file);
     }
     protected static void grantUriPermissions(Context context, String packageName, Uri uri) {
         if (Build.VERSION.SDK_INT >= 19) {
