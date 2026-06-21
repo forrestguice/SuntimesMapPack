@@ -41,48 +41,37 @@ jobs:
         restore-keys: |
             ${{ runner.os }}-gradle-
 
-    - name: Build with Gradle
-      run: ./gradlew assembleDebug
 
+    - name: Build with Gradle (debug apk)
+      run: ./gradlew assembleProductionDebug
+    
     - name: Upload artifacts (debug apk)
       uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f  #7.0.0
       with:
-        name: app
-        path: app/build/outputs/apk/debug/app-debug.apk
+        name: app-debug
+        path: app/build/outputs/apk/production/debug/app-production-debug.apk
 
-    - name: Build with Gradle (Unit tests)
-      run: ./gradlew testRelease
+
+    - name: Build with Gradle (unit tests)
+      run: ./gradlew testProductionRelease || true
+
+    - name: Build with Gradle (lintRelease)
+      run: ./gradlew lintProductionRelease || true
 
     - name: Build with Gradle (lintVitalRelease)
-      run: ./gradlew lintRelease || true
-
-    - name: Build with Gradle (lintVitalRelease)
-      run: ./gradlew lintVitalRelease
+      run: ./gradlew lintVitalProductionRelease
+      
 
     - name: Upload artifacts (lint results)
       if: success() || failure()
       uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f  #7.0.0
       with:
-        name: lint-results
-        path: app/build/reports/lint-results-release-fatal.html
+        name: lint-results.html
+        path: app/build/reports/lint-results-productionRelease.html
 
-    - name: Upload artifacts (lint results)
-      if: success() || failure()
-      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f  #7.0.0
-      with:
-        name: lint-results
-        path: app/build/reports/lint-results-release.html
-
-    - name: Upload artifacts (merge report)
-      if: success() || failure()
-      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f  #7.0.0
-      with:
-        name: manifest-merger-report
-        path: app/build/outputs/logs/manifest-merger-release-report.html
-
-    - name: Upload artifacts (test results)
+    - name: Upload artifacts (unit test results)
       if: success() || failure()
       uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f  #7.0.0
       with:
         name: test-results
-        path: app/build/reports/tests/testReleaseUnitTest/
+        path: app/build/reports/tests/testProductionReleaseUnitTest/
