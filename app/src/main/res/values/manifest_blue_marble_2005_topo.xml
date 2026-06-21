@@ -57,7 +57,7 @@
     <string-array name="blue_marble_2005_topo_aeqd_phoenix">
         <item>world_topo_aeqd_33,-111.png</item>            <!-- file -->
         <item>day</item>                                    <!-- type -->
-        <item>Phoenix: Blue Marble (2005)</item>            <!-- title -->
+        <item>North America: Blue Marble (2005)</item>            <!-- title -->
         <item>@string/about_blue_marble_2005_topo</item>   <!-- summary -->
         <item>aeqd_33,-111</item>                           <!-- projection -->
         <item>33,-111</item>                                <!-- projection center -->

@@ -17,7 +17,7 @@ public class BaseMaps
         public BaseMap_AEQD_North() {
             super();
             this.file_uri = "basemap_aeqd_north.png";
-            this.title = "Default";
+            this.title = "Default (North)";
             this.tint = true;
         }
     }
@@ -27,7 +27,29 @@ public class BaseMaps
         public BaseMap_AEQD_South() {
             super();
             this.file_uri = "basemap_aeqd_south.png";
-            this.title = "Default";
+            this.title = "Default (South)";
+            this.tint = true;
+        }
+    }
+
+    public static class BaseMap_AEQD_Cairo extends MapDefinition_AEQD
+    {
+        public BaseMap_AEQD_Cairo() {
+            super();
+            this.file_uri = "basemap_aeqd_cairo_30,31.png";
+            this.map_projection_center = new double[] { 30, 31 };
+            this.title = "Default (Cairo)";
+            this.tint = true;
+        }
+    }
+
+    public static class BaseMap_AEQD_Phoenix extends MapDefinition_AEQD
+    {
+        public BaseMap_AEQD_Phoenix() {
+            super();
+            this.file_uri = "basemap_aeqd_33,-111.png";
+            this.map_projection_center = new double[] { 33, -111 };
+            this.title = "Default (North America)";
             this.tint = true;
         }
     }

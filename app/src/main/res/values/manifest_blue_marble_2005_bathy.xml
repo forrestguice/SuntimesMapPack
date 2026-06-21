@@ -57,7 +57,7 @@
     <string-array name="blue_marble_2005_bathy_aeqd_phoenix">
         <item>world_topo_bathy_aeqd_33,-111.png</item>      <!-- file -->
         <item>day</item>                                    <!-- type -->
-        <item>Phoenix: Blue Marble (2005) [Bathymetry]</item>      <!-- title -->
+        <item>North America: Blue Marble (2005) [Bathymetry]</item>      <!-- title -->
         <item>@string/about_blue_marble_2005_bathy</item>   <!-- summary -->
         <item>aeqd_33,-111</item>                           <!-- projection -->
         <item>33,-111</item>                                <!-- projection center -->

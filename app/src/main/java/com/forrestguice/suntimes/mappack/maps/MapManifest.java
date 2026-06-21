@@ -62,6 +62,8 @@ public final class MapManifest
     static {
         add(new BaseMaps.BaseMap_AEQD_North());
         add(new BaseMaps.BaseMap_AEQD_South());
+        add(new BaseMaps.BaseMap_AEQD_Cairo());
+        add(new BaseMaps.BaseMap_AEQD_Phoenix());
         add(new BaseMaps.BaseMap_ECQ());
         add(new BaseMaps.BaseMap_MERC());
         add(new BaseMaps.BaseMap_SINU());

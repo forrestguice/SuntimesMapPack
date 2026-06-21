@@ -73,7 +73,7 @@
     <string-array name="blue_marble_2002_ice_aeqd_phoenix">
         <item>land_ocean_ice_aeqd_33,-111.png</item>     <!-- file -->
         <item>day</item>                                    <!-- type -->
-        <item>Phoenix: Blue Marble (2002) [Sea Ice]</item>            <!-- title -->
+        <item>North America: Blue Marble (2002) [Sea Ice]</item>            <!-- title -->
         <item>@string/about_blue_marble_2002_ice</item>         <!-- summary -->
         <item>aeqd_33,-111</item>                           <!-- projection -->
         <item>33,-111</item>                                <!-- projection center -->
