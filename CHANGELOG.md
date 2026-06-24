@@ -1,3 +1,4 @@
+### v0.1.0 (2026-06-23)
 - Adds additional map backgrounds to the World Map dialog (needs [Suntimes v0.17.3](https://github.com/forrestguice/SuntimesWidget/) or later).
 - Supports the following projections; `eqc`, `merc`, `vandg`, `sinu`, and `aeqd`.
 - Includes
