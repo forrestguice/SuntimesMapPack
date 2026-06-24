@@ -1,0 +1,12 @@
+### v0.1.0 (2026-06-23)
+- Adds additional map backgrounds to the World Map dialog (needs [Suntimes v0.17.3](https://github.com/forrestguice/SuntimesWidget/) or later).
+- Supports the following projections; `eqc`, `merc`, `vandg`, `sinu`, and `aeqd`.
+- Includes
+  - Blue Marble (2002)
+  - Blue Marble (2002) [Sea Ice]
+  - Blue Marble (2005)
+  - Blue Marble (2005) [Bathymetry]
+  - Earth\'s City Lights
+  - Solar Textures
+  - Solar Textures [Bathymetry]
+  - World Bedrock Digital Elevation Model

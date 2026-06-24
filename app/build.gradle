@@ -11,9 +11,6 @@ android {
         minSdk 16
         targetSdk 36
 
-        versionCode 1
-        versionName "0.1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         resConfigs "en"
 
@@ -27,6 +24,9 @@ android {
         manifestPlaceholders.mappackAuthorityRoot = "$mappackAuthorityRoot"
         buildConfigField "String", "AUTHORITY_ROOT", "\"$mappackAuthorityRoot\""
         buildConfigField "String", "SUNTIMES_APPLICATION_ID", "\"$suntimesApplicationId\""
+
+        versionCode 1
+        versionName "0.1.0"
     }
 
     flavorDimensions = [ "versiontype" ]
