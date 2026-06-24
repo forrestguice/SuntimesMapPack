@@ -1,6 +1,5 @@
 # SuntimesMapPack
 A world map background expansion pack for Suntimes. <br/>
-It depends on [Suntimes v0.17.3](https://github.com/forrestguice/SuntimesWidget/) or later.
 
 <img alt="Van der Grinten" src='https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/bluemarble/thumbnails/thumbnail_world_topo_bathy_vandg.png' width="280px" />
 
@@ -12,9 +11,19 @@ It depends on [Suntimes v0.17.3](https://github.com/forrestguice/SuntimesWidget/
 * [Bug Reports](#bug-reports)
 * [Legal Stuff](#legal-stuff)
 
-This addon for Suntimes adds map backgrounds to the World Map dialog.
+This addon provides map backgrounds for the World Map dialog. It requires [Suntimes v0.17.3](https://github.com/forrestguice/SuntimesWidget/) or later.
 
-Map backgrounds can also be [downloaded](https://forrestguice.github.io/Suntimes/help/dialogs/worldmap/downloadbackgrounds/index.html) and loaded in Suntimes using the `Set Map Background` option. This addon offers a more convenient way to download and use these files.
+Backgrounds:
+- Blue Marble (2002)
+- Blue Marble (2002) [Sea Ice]
+- Blue Marble (2005)
+- Blue Marble (2005) [Bathymetry]
+- Earth\'s City Lights
+- Solar Textures
+- Solar Textures [Bathymetry]
+- World Bedrock Digital Elevation Model
+
+Map backgrounds can also be [downloaded](https://github.com/forrestguice/SuntimesMapPack/tree/main/app/src/main/assets) individually and loaded in Suntimes using the `Set Map Background` option.
 
 
 ## Nightly Version ##
@@ -30,6 +39,7 @@ A "nightly" version is available at https://forrestguice.github.io/SuntimesMapPa
 Do you find value in this software? Pay as you feel.
 
 <noscript><a href="https://liberapay.com/forrestguice/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+
 [![paypal](https://www.paypalobjects.com/webstatic/en_US/i/btn/png/silver-rect-paypal-26px.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NZJ5FJBCKY6K2)
 
 
