@@ -25,6 +25,14 @@ Backgrounds:
 
 Map backgrounds can also be [downloaded](https://github.com/forrestguice/SuntimesMapPack/tree/main/app/src/main/assets) individually and loaded in Suntimes using the `Set Map Background` option.
 
+## Screenshots ##
+<img alt="0" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/fastlane/metadata/android/en-US/images/phoneScreenshots/0.png' width="200x" />
+<img alt="1" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png' width="200px" />
+<img alt="2" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png' width="200px" />
+<img alt="3" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png' width="200px" />
+<img alt="4" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png' width="200px" />
+<img alt="5" src='https://github.com/forrestguice/SuntimesMapPack/blob/main/fastlane/metadata/android/en-US/images/phoneScreenshots/5.png' width="200px" />
+
 
 ## Nightly Version ##
 
